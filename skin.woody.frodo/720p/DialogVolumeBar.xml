@@ -1,0 +1,58 @@
+<window id="104">
+	<defaultcontrol>1</defaultcontrol>
+		<animation effect="slide" start="0,-40" end="0,0" time="100">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="0,-40" delay="400" time="100">WindowClose</animation>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>100</posy>
+	</coordinates>
+  
+	<animation type="WindowOpen">
+		<effect type="zoom" start="80" end="100" center="600,20" tween="back" time="300"/>
+		<effect type="fade" start="0" end="100" time="200"/>
+	</animation>
+	<animation type="WindowClose">
+		<effect type="zoom" start="100" end="90" center="600,20" time="100"/>
+		<effect type="fade" start="100" end="0" time="100"/>
+	</animation>
+
+	<controls>
+	<control type="group">
+	<visible>!Player.Muted</visible>
+	<control type="image">
+	    	<width>360</width>
+    		<height>120</height>
+    		<posx>462</posx>
+		<posy>-95</posy>
+		<aspectratio>keep</aspectratio>
+    		<texture border="3">Volume_bg.png</texture>
+	</control>  
+	<control type="progress" id="1">
+    		<description>Progress Bar</description>
+	    	<width>280</width>
+    		<height>50</height>
+    		<posx>500</posx>
+		<posy>-50</posy>
+		<aspectratio>scale</aspectratio>
+    		<texturebg border="11">ProgressBackVolume.png</texturebg>
+		<lefttexture border="0">ProgressLeftVolume.png</lefttexture>
+    		<midtexture border="0">ProgressMidVolume.png</midtexture>
+    		<righttexture border="0">ProgressRightVolume.png</righttexture>
+		<overlaytexture>-</overlaytexture>
+		<info>Player.Volume</info>
+  	</control>
+	<control type="label" id="0">
+		<posx>438</posx>
+		<posy>-65</posy>
+		<align>center</align>
+		<font>aller_4_20</font>
+		<textcolor>greym</textcolor>
+		<label>$INFO[Player.Volume]</label>
+	</control>
+</control>
+  
+</controls>
+  
+</window>

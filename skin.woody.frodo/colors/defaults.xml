@@ -1,0 +1,16 @@
+<colors>
+	<color name="white">FFFFFFFF</color>
+	<color name="grey">FFb4b4b4</color>
+	<color name="grey2">88FFFFFF</color>
+	<color name="grey3">33FFFFFF</color>
+	<color name="black">FF000000</color>
+	<color name="Red">FFFF0000</color>
+	<color name="greyd">FF333333</color>
+	<color name="greyl">FF777777</color>
+	<color name="blue">FF0687D3</color>
+	<color name="blued">FF174B6B</color>
+	<color name="greym">FF666666</color>
+	<color name="greymd">FF3E3E3E</color>
+	<color name="selected">FFEB9E17</color>
+	<color name="dialogheader">DDced8da</color>
+</colors>
