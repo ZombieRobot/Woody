@@ -675,8 +675,8 @@
 			</control>
 		</control>
 		<control type="group">
-			<posx>0</posx>
-			<posy>33r</posy>
+			<posx>-110</posx>
+			<posy>207r</posy>
 			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 			<include>Window_OpenClose_Animation</include>
 			<control type="rss">
@@ -684,20 +684,12 @@
 				<posx>100</posx>
 				<posy>0</posy>
 				<height>30</height>
-				<width>1145</width>
+				<width>1300</width>
 				<font>font12</font>
 				<urlset>1</urlset>
 				<textcolor>blue</textcolor>
 				<titlecolor>blue</titlecolor>
 				<headlinecolor>white</headlinecolor>
-			</control>
-			<control type="image">
-				<description>RSS background</description>
-				<posx>1250</posx>
-				<posy>2</posy>
-				<width>24</width>
-				<height>24</height>
-				<texture>icon-rss.png</texture>
 			</control>
 		</control>
 		<control type="group" id="10">

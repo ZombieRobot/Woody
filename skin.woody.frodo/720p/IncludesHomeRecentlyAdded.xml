@@ -9,14 +9,14 @@
 			<animation effect="fade" time="300" delay="1000">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
 			<control type="group">
-				<posx>190</posx>
-				<posy>50</posy>
+				<posx>40</posx>
+				<posy>165r</posy>
 				<visible>Library.HasContent(Movies)</visible>
 				<visible>Container(9000).Hasfocus(10) + !Skin.HasSetting(HomepageHideRecentlyAddedVideo)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="label">
 					<description>Title label</description>
-					<posx>180</posx>
+					<posx>0</posx>
 					<posy>220</posy>
 					<height>20</height>
 					<width>540</width>
@@ -34,7 +34,7 @@
 					<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(8000).NumItems,1)">conditional</animation>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>900</width>
+					<width>1200</width>
 					<height>220</height>
 					<onleft>8000</onleft>
 					<onright>8000</onright>
@@ -45,24 +45,28 @@
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<orientation>Horizontal</orientation>
-					<itemlayout height="220" width="180">
+					<itemlayout height="220" width="135">
 						<control type="image">
 							<description>background</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>180</width>
-							<height>220</height>
-							<texture border="15">RecentAddedBack.png</texture>
+							<posx>7</posx>
+							<posy>8</posy>
+							<width>95</width>
+							<height>137</height>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true">posterframeWhite.png</texture>
+							<colordiffuse>45FFFFFF</colordiffuse>
 						</control>
+						
 						<control type="image">
 							<posx>10</posx>
-							<posy>10</posy>
-							<width>160</width>
-							<height>170</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
-						</control>
+							<posy>11</posy>
+							<width>89</width>
+							<height>130</height>
+							<texture background="true" diffuse="bigPosterMask.png">defaultvideo.png</texture>
+							<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+							<info>ListItem.Icon</info>
+						</control>	
+						
 						<control type="label">
 							<posx>90</posx>
 							<posy>185</posy>
@@ -77,35 +81,47 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="220" width="180">
+					<focusedlayout height="220" width="135">
 						<control type="image">
 							<description>background</description>
 							<posx>0</posx>
-							<posy>0</posy>
-							<width>180</width>
-							<height>220</height>
-							<texture border="15">RecentAddedBack.png</texture>
+							<posy>1.5</posy>
+							<width>109</width>
+							<height>152</height>
+							<aspectratio>stretch</aspectratio>
+							<texture border="20" background="true">posterframeBlue.png</texture>
+							<animation effect="zoom" end="109" center="90,85" time="200">Focus</animation>
 						</control>
+					
 						<control type="image">
 							<posx>10</posx>
-							<posy>10</posy>
-							<width>160</width>
-							<height>170</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">folder-focus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<posy>11</posy>
+							<width>89</width>
+							<height>130</height>
+							<texture diffuse="bigPosterMask.png" background="false">defaultvideo.png</texture>
+							<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+							<animation effect="zoom" end="109" center="90,85" time="200">Focus</animation>
+							<info>ListItem.Icon</info>
 							<visible>Control.HasFocus(8000)</visible>
-						</control>
+						</control>	
 						<control type="image">
 							<posx>10</posx>
-							<posy>10</posy>
-							<width>160</width>
-							<height>170</height>
-							<texture>$INFO[ListItem.Icon]</texture>
-							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>5</bordersize>
+							<posy>11</posy>
+							<width>89</width>
+							<height>130</height>
+							<texture diffuse="bigPosterMask.png" background="false">defaultvideo.png</texture>
+							<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+							<animation effect="zoom" end="109" center="90,85" time="200">Focus</animation>
+							<info>ListItem.Icon</info>
 							<visible>!Control.HasFocus(8000)</visible>
-						</control>
+						</control>	
+						
+						
+						
+						
+						
+						
+						
 						<control type="label">
 							<posx>90</posx>
 							<posy>185</posy>
@@ -141,6 +157,7 @@
 							<icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
 							<thumb>-</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.1.Title))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestMovie.1.Fanart)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
@@ -149,6 +166,7 @@
 							<icon>$INFO[Window.Property(LatestMovie.2.Thumb)]</icon>
 							<thumb>-</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.2.Title))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestMovie.2.Fanart)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
@@ -157,6 +175,7 @@
 							<icon>$INFO[Window.Property(LatestMovie.3.Thumb)]</icon>
 							<thumb>-</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.3.Title))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestMovie.3.Fanart)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
@@ -165,22 +184,25 @@
 							<icon>$INFO[Window.Property(LatestMovie.4.Thumb)]</icon>
 							<thumb>-</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.4.Title))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestMovie.4.Fanart)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.5.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.5.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.5.Fanart)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.5.Title))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestMovie.5.Fanart)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
 							<label2></label2>
 							<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.6.Path)])</onclick>
 							<icon>$INFO[Window.Property(LatestMovie.6.Thumb)]</icon>
-							<thumb>-</thumb>
+							<thumb>$INFO[Window.Property(LatestMovie.6.Fanart)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.6.Title))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestMovie.6.Fanart)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
@@ -189,6 +211,7 @@
 							<icon>$INFO[Window.Property(LatestMovie.7.Thumb)]</icon>
 							<thumb>-</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.7.Title))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestMovie.7.Fanart)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
@@ -197,6 +220,7 @@
 							<icon>$INFO[Window.Property(LatestMovie.8.Thumb)]</icon>
 							<thumb>-</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.8.Title))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestMovie.8.Fanart)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
@@ -205,6 +229,7 @@
 							<icon>$INFO[Window.Property(LatestMovie.9.Thumb)]</icon>
 							<thumb>-</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.9.Title))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestMovie.9.Fanart)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
@@ -213,13 +238,14 @@
 							<icon>$INFO[Window.Property(LatestMovie.10.Thumb)]</icon>
 							<thumb>-</thumb>
 							<visible>!IsEmpty(Window.Property(LatestMovie.10.Title))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestMovie.10.Fanart)]</property>
 						</item>
 					</content>
 				</control>
 				<control type="button">
 					<description>left Arrow</description>
 					<posx>-40</posx>
-					<posy>90</posy>
+					<posy>55</posy>
 					<width>30</width>
 					<height>40</height>
 					<texturefocus>arrow-big-left.png</texturefocus>
@@ -230,8 +256,8 @@
 				</control>
 				<control type="button">
 					<description>right Arrow</description>
-					<posx>910</posx>
-					<posy>90</posy>
+					<posx>40r</posx>
+					<posy>55</posy>
 					<width>30</width>
 					<height>40</height>
 					<texturefocus>arrow-big-right.png</texturefocus>

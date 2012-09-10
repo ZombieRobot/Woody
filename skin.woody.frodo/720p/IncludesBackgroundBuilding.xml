@@ -40,6 +40,16 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
+			<texture background="true">$INFO[Container(8000).ListItem.Property(Fanart)]</texture>
+			<include>backgroundfade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>Control.HasFocus(8000)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
 			<texture>special://skin/backgrounds/media-overlay.jpg</texture>
 			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)</visible>
 		</control>
