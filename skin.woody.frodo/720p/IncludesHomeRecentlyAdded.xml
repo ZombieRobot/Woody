@@ -32,6 +32,7 @@
 					<animation effect="slide" start="0,0" end="180,0" time="0" condition="StringCompare(Container(8000).NumItems,3)">conditional</animation>
 					<animation effect="slide" start="0,0" end="270,0" time="0" condition="StringCompare(Container(8000).NumItems,2)">conditional</animation>
 					<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(8000).NumItems,1)">conditional</animation>
+					<visible>!Control.HasFocus(700)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1200</width>

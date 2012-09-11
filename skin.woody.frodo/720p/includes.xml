@@ -138,7 +138,25 @@
 			<texture>Confluence_Logo.png</texture>
 		</control>
 	</include>
-<!--MainWindowMouseButtons Home/Settings/Search icons-->
+<!--Tutorial-->
+	<include name="tutorial">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<aspectratio>keep</aspectratio>
+			<texture>tutorial.png</texture>
+		</control>
+		<control type="image">
+			<animation effect="fade" end="100" time="150" delay="0">Visible</animation>
+			<animation effect="fade" end="0" time="150" delay="0">Hidden</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<aspectratio>keep</aspectratio>
+			<texture>tutorial_hint2x.png</texture>
+			<visible>Container(9000).Hasfocus(10)</visible>
+		</control>
+	</include>
+	<!--MainWindowMouseButtons Home/Settings/Search icons-->
 	<include name="MainWindowMouseButtons">
 		<control type="group">
 			<posx>20</posx>
@@ -147,7 +165,7 @@
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>system.getbool(input.enablemouse)</visible>
 			
-			<control type="button">
+			<control type="button" id="608">
 				<description>Home push button</description>
 				<posx>0</posx>
 				<posy>0</posy>
@@ -159,21 +177,31 @@
 				<onclick>ActivateWindow(home)</onclick>
 				<texturefocus>home_quit_focused.png</texturefocus>
 				<texturenofocus>home_quit_unfocused.png</texturenofocus>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
+				<onleft>610</onleft>
+				<onright>609</onright>
+				<onup>9003</onup>
+				<ondown>9000</ondown>
+				<visible>!Window.IsVisible(Home)</visible>
 			</control>
-			<control tye="image">
-				<description>Home Icon</description>
-				<posx>60</posx>
-				<posy>5</posy>
+			<control type="button" id="608">
+				<description>Home push button</description>
+				<posx>0</posx>
+				<posy>0</posy>
 				<width>19</width>
 				<height>19</height>
-				<aspectratio>keep</aspectratio>
-				<texture>home_quit_unfocused.png</texture>
+				<label>31003</label>
+				<font>-</font>
+				<aligny>-</aligny>
+				<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				<texturefocus>home_quit_focused.png</texturefocus>
+				<texturenofocus>home_quit_unfocused.png</texturenofocus>
+				<onleft>610</onleft>
+				<onright>609</onright>
+				<onup>9003</onup>
+				<ondown>9000</ondown>
+				<visible>Window.IsVisible(Home)</visible>
 			</control>
-			<control type="button">
+			<control type="button" id="609">
 				<description>Settings push button</description>
 				<posx>33</posx>
 				<posy>0</posy>
@@ -185,22 +213,13 @@
 				<onclick>ActivateWindow(Settings)</onclick>
 				<texturefocus>home_settings_focused.png</texturefocus>
 				<texturenofocus>home_settings_unfocused.png</texturenofocus>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
+				<onleft>608</onleft>
+				<onright>610</onright>
+				<onup>9003</onup>
+				<ondown>9000</ondown>
 			</control>
-			<control tye="image">
-				<description>Settings Icon</description>
-				<posx>5</posx>
-				<posy>5</posy>
-				<width>19</width>
-				<height>19</height>
-				<aspectratio>keep</aspectratio>
-				<texture>home_settings_unfocused.png</texture>
-			</control>
-			<control type="button">
-				<visible>System.HasAddon(script.globalsearch)</visible>
+		
+			<control type="button" id="610">
 				<description>Global Search push button</description>
 				<posx>66</posx>
 				<posy>0</posy>
@@ -212,19 +231,11 @@
 				<onclick>RunScript(script.globalsearch)</onclick>
 				<texturefocus>home_search_focused.png</texturefocus>
 				<texturenofocus>home_search_unfocused.png</texturenofocus>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
-			</control>
-			<control type="image">
-				<description>Global Search Icon</description>
-				<posx>66</posx>
-				<posy>0</posy>
-				<width>19</width>
-				<height>19</height>
-				<aspectratio>keep</aspectratio>
-				<texture>home_search_unfocused.png</texture>
+				<onleft>609</onleft>
+				<onright>608</onright>
+				<onup>9003</onup>
+				<ondown>9000</ondown>
+				<visible>System.HasAddon(script.globalsearch)</visible>
 			</control>
 		</control>
 	</include>
@@ -868,7 +879,7 @@
 		</animation>
 		<hitrect x="0" y="530" w="1280" h="120" />
 		<posx>0</posx>
-		<posy>190r</posy>
+		<posy>160r</posy>
 		<width>1280</width>
 		<height>200</height>
 		<pagecontrol>-</pagecontrol>

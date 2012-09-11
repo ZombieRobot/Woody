@@ -30,7 +30,8 @@
 			</control>	
 		</control>
 		<include>MainWindowMouseButtons</include>
-		
+<!--Tutorial--> 
+		<include condition="Skin.HasSetting(tutorial)">tutorial</include>		
 		
 		<control tye="image">
 			<description>LOGO</description>
@@ -287,33 +288,7 @@
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>
 			
-			<control type="radiobutton" id="608">
-				<colordiffuse>CCFFFFFF</colordiffuse>
-				<description>Global Search</description>
-				<posx>35</posx>
-				<posy>0</posy>
-				<height>35</height>
-				<width>145</width>
-				<textwidth>150</textwidth>
-				<textoffsetx>10</textoffsetx>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<texturefocus flipy="true" border="5">HomeSubFO.png</texturefocus>
-				<texturenofocus flipy="true" border="5">HomeSubNF.png</texturenofocus>
-				<pulseonselect>false</pulseonselect>
-				<label>137</label>
-				<onclick>RunScript(script.globalsearch)</onclick>
-				<textureradiofocus>icon_search.png</textureradiofocus>
-				<textureradionofocus>icon_search.png</textureradionofocus>
-				<onleft>607</onleft>
-				<onright>601</onright>
-				<onup>9003</onup>
-				<ondown>9000</ondown>
-				<visible>System.HasAddon(script.globalsearch)</visible>
-			</control>
+			
 			<control type="group" id="600">
 				<posx>180</posx>
 				<onup>9003</onup>
@@ -625,13 +600,14 @@
 		<control type="group" id="9002">
 			<onup>9001</onup>
 			<ondown>20</ondown>
+			<visible>!Control.HasFocus(8000)</visible>
 			<control type="fixedlist" id="700">
 				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(700).NumItems,2) | StringCompare(Container(700).NumItems,4)">conditional</animation>
 				<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
 				<onleft>700</onleft>
 				<onright>700</onright>
 				<onup>9001</onup>
-				<ondown>20</ondown>
+				<ondown>8000</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
 					<include>HomeAddonItemsVideos</include>
