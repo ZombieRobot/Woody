@@ -54,7 +54,13 @@
 			<filename>aller_3.ttf</filename>
 			<size>26</size>
 			<aspect>1.0</aspect>
-		</font>		
+		</font>	
+		<font>
+			<name>homesubmenu</name>
+			<filename>aller_1.ttf</filename>
+			<size>26</size>
+			<aspect>1.0</aspect>
+		</font>	
 		<font>
 			<name>Mediumrg3</name>
 			<filename>aller_3.ttf</filename>
