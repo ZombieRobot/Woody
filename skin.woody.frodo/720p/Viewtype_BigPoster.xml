@@ -39,6 +39,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture border="20" background="true">posterframeBlue.png</texture>
 			</control>
+			
 			<control type="image">
 				<posx>145</posx>
 				<posy>87</posy>
@@ -47,7 +48,7 @@
 				<texture diffuse="bigPosterMask.png" background="false">defaultvideo.png</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				<info>ListItem.Icon</info>
-			</control>	
+			</control>
 		</control>	
 		
 		<control type="group">
@@ -470,7 +471,7 @@
 				</control>						
 			</control>				
 <!--Small HD/SD logo-->			
-			<control type="image">
+			<!--control type="image">
 				<description>Video rez Image</description>
 				<include>VisibleFadeEffect</include>
 				<posx>-8</posx>
@@ -479,6 +480,16 @@
 				<height>30</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture>$INFO[ListItem.VideoResolution,flagging/,.png]</texture>
+			</control-->
+			<control type="image">
+				<description>Video rez Image</description>
+				<include>VisibleFadeEffect</include>
+				<posx>31</posx>
+				<posy>278</posy>
+				<width>65</width>
+				<height>65</height>
+				<aspectratio align="right">keep</aspectratio>
+				<texture>$INFO[ListItem.VideoResolution,posterflag/,.png]</texture>
 			</control>
 <!--Movie Rating EG:pg/g-->			
 			<control type="grouplist">
