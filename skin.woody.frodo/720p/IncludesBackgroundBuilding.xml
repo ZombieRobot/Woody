@@ -35,6 +35,7 @@
 			<include>Window_OpenClose_Animation</include>
 			<visible>![Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] + ![Player.HasAudio + ![Skin.HasSetting(ShowBackgroundVis) | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)]]</visible>
 		</control>
+<!--------FANART BACKGROUND FOR RECENTLY ADDED MOVIES HOME SCREEN----------->	
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -44,6 +45,17 @@
 			<include>backgroundfade</include>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<visible>Control.HasFocus(8000)</visible>
+		</control>
+<!--------FANART BACKGROUND FOR RECENTLY ADDED TV SHOWS HOME SCREEN----------->		
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true">$INFO[Container(8001).ListItem.Property(Fanart)]</texture>
+			<include>backgroundfade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<visible>Control.HasFocus(8001)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>

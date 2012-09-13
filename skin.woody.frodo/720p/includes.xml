@@ -178,7 +178,7 @@
 				<onclick>ActivateWindow(home)</onclick>
 				<texturefocus>home_quit_focused.png</texturefocus>
 				<texturenofocus>home_quit_unfocused.png</texturenofocus>
-				<onleft>610</onleft>
+				<onleft>611</onleft>
 				<onright>609</onright>
 				<onup>9003</onup>
 				<ondown>9000</ondown>
@@ -196,7 +196,7 @@
 				<onclick>ActivateWindow(ShutdownMenu)</onclick>
 				<texturefocus>home_quit_focused.png</texturefocus>
 				<texturenofocus>home_quit_unfocused.png</texturenofocus>
-				<onleft>610</onleft>
+				<onleft>611</onleft>
 				<onright>609</onright>
 				<onup>9003</onup>
 				<ondown>9000</ondown>
@@ -219,10 +219,26 @@
 				<onup>9003</onup>
 				<ondown>9000</ondown>
 			</control>
-		
 			<control type="button" id="610">
-				<description>Global Search push button</description>
+				<description>favourites push button</description>
 				<posx>66</posx>
+				<posy>0</posy>
+				<width>19</width>
+				<height>19</height>
+				<label>1036</label>
+				<font>-</font>
+				<aligny>-</aligny>
+				<onclick>ActivateWindow(Favourites)</onclick>
+				<texturefocus>home_add_focused.png</texturefocus>
+				<texturenofocus>home_add_unfocused.png</texturenofocus>
+				<onleft>609</onleft>
+				<onright>611</onright>
+				<onup>9003</onup>
+				<ondown>9000</ondown>
+			</control>
+			<control type="button" id="611">
+				<description>Global Search push button</description>
+				<posx>99</posx>
 				<posy>0</posy>
 				<width>19</width>
 				<height>19</height>
@@ -232,7 +248,7 @@
 				<onclick>RunScript(script.globalsearch)</onclick>
 				<texturefocus>home_search_focused.png</texturefocus>
 				<texturenofocus>home_search_unfocused.png</texturenofocus>
-				<onleft>609</onleft>
+				<onleft>610</onleft>
 				<onright>608</onright>
 				<onup>9003</onup>
 				<ondown>9000</ondown>
@@ -854,7 +870,7 @@
 			<animation effect="slide" start="200,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 		</control>
 	</include>
-	<include nae="time">
+	<include name="time">
 		<control type="label">
 			<description>time label</description>
 			<posx>1136</posx>

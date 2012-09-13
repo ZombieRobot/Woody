@@ -436,7 +436,7 @@
 				<posy>70</posy>
 				<onup condition="System.HasAddon(script.globalsearch)">608</onup>
 				<onup condition="!System.HasAddon(script.globalsearch)">603</onup>
-				<ondown>9002</ondown>
+				<ondown>9000</ondown>
 				<control type="grouplist" id="9010">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9000</onleft>

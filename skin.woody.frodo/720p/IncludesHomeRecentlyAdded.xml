@@ -327,6 +327,15 @@
 							<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 							<info>ListItem.Icon</info>
 						</control>	
+						<control type="image">
+							<posx>14.5</posx>
+							<posy>118</posy>
+							<width>80</width>
+							<height>19</height>
+							<texture>home_posterlabel.png</texture>
+							<aspectratio>scale</aspectratio>
+							<animation effect="zoom" end="109" center="90,85" time="200">Focus</animation>
+						</control>	
 						<control type="label">
 							<posx>120</posx>
 							<posy>168</posy>
@@ -352,6 +361,19 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<posx>55</posx>
+							<posy>116.5</posy>
+							<width>74</width>
+							<height>20</height>
+							<font>recent_tv_episode_number</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(EpisodeNumber)]</label>
 						</control>
 					</itemlayout>
 					<focusedlayout height="220" width="135">
@@ -388,7 +410,30 @@
 							<animation effect="zoom" end="109" center="90,85" time="200">Focus</animation>
 							<info>ListItem.Icon</info>
 							<visible>!Control.HasFocus(8001)</visible>
-						</control>	
+						</control>
+						<control type="image">
+							<posx>14.5</posx>
+							<posy>118</posy>
+							<width>80</width>
+							<height>19</height>
+							<texture>home_posterlabel.png</texture>
+							<aspectratio>scale</aspectratio>
+							<animation effect="zoom" end="109" center="90,85" time="200">Focus</animation>
+						</control>
+						<control type="label">
+							<posx>55</posx>
+							<posy>116.5</posy>
+							<width>74</width>
+							<height>20</height>
+							<font>recent_tv_episode_number</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(EpisodeNumber)]</label>
+							<animation effect="zoom" end="109" center="90,85" time="200">Focus</animation>
+						</control>
 						<control type="label">
 							<posx>120</posx>
 							<posy>168</posy>
@@ -428,6 +473,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<visible>Control.HasFocus(8001)</visible>
 						</control>
+						
 					</focusedlayout>
 					<content>
 						<item>
@@ -437,6 +483,9 @@
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(LatestEpisode.1.ShowThumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestEpisode.1.EpisodeTitle))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestEpisode.1.Fanart)]</property>
+							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.1.EpisodeSeasonNo)]</property>
+			                <property name="EpisodeNumber">$INFO[Window.Property(LatestEpisode.1.EpisodeNo)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label>
@@ -445,6 +494,9 @@
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(LatestEpisode.2.ShowThumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestEpisode.2.EpisodeTitle))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestEpisode.2.Fanart)]</property>
+							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.2.EpisodeSeasonNo)]</property>
+			                <property name="EpisodeNumber">$INFO[Window.Property(LatestEpisode.2.EpisodeNo)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label>
@@ -453,6 +505,9 @@
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(LatestEpisode.3.ShowThumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestEpisode.3.EpisodeTitle))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestEpisode.3.Fanart)]</property>
+							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.3.EpisodeSeasonNo)]</property>
+			                <property name="EpisodeNumber">$INFO[Window.Property(LatestEpisode.3.EpisodeNo)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label>
@@ -461,6 +516,9 @@
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(LatestEpisode.4.ShowThumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestEpisode.4.EpisodeTitle))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestEpisode.4.Fanart)]</property>
+							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.4.EpisodeSeasonNo)]</property>
+			                <property name="EpisodeNumber">$INFO[Window.Property(LatestEpisode.4.EpisodeNo)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestEpisode.5.EpisodeTitle)]</label>
@@ -469,6 +527,9 @@
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(LatestEpisode.5.ShowThumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestEpisode.5.EpisodeTitle))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestEpisode.5.Fanart)]</property>
+							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.5.EpisodeSeasonNo)]</property>
+			                <property name="EpisodeNumber">$INFO[Window.Property(LatestEpisode.5.EpisodeNo)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestEpisode.6.EpisodeTitle)]</label>
@@ -477,6 +538,9 @@
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(LatestEpisode.6.ShowThumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestEpisode.6.EpisodeTitle))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestEpisode.6.Fanart)]</property>
+							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.6.EpisodeSeasonNo)]</property>
+			                <property name="EpisodeNumber">$INFO[Window.Property(LatestEpisode.6.EpisodeNo)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestEpisode.7.EpisodeTitle)]</label>
@@ -485,6 +549,9 @@
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(LatestEpisode.7.ShowThumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestEpisode.7.EpisodeTitle))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestEpisode.7.Fanart)]</property>
+							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.7.EpisodeSeasonNo)]</property>
+			                <property name="EpisodeNumber">$INFO[Window.Property(LatestEpisode.7.EpisodeNo)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestEpisode.8.EpisodeTitle)]</label>
@@ -493,6 +560,9 @@
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(LatestEpisode.8.ShowThumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestEpisode.8.EpisodeTitle))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestEpisode.8.Fanart)]</property>
+							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.8.EpisodeSeasonNo)]</property>
+			                <property name="EpisodeNumber">$INFO[Window.Property(LatestEpisode.8.EpisodeNo)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestEpisode.9.EpisodeTitle)]</label>
@@ -501,6 +571,9 @@
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(LatestEpisode.9.ShowThumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestEpisode.9.EpisodeTitle))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestEpisode.9.Fanart)]</property>
+							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.9.EpisodeSeasonNo)]</property>
+			                <property name="EpisodeNumber">$INFO[Window.Property(LatestEpisode.9.EpisodeNo)]</property>
 						</item>
 						<item>
 							<label>$INFO[Window.Property(LatestEpisode.10.EpisodeTitle)]</label>
@@ -509,6 +582,9 @@
 							<icon>-</icon>
 							<thumb>$INFO[Window.Property(LatestEpisode.10.ShowThumb)]</thumb>
 							<visible>!IsEmpty(Window.Property(LatestEpisode.10.EpisodeTitle))</visible>
+							<property name="Fanart">$INFO[Window.Property(LatestEpisode.10.Fanart)]</property>
+							<property name="EpisodeSeason">$INFO[Window.Property(LatestEpisode.10.EpisodeSeasonNo)]</property>
+			                <property name="EpisodeNumber">$INFO[Window.Property(LatestEpisode.10.EpisodeNo)]</property>
 						</item>
 					</content>
 				</control>
