@@ -48,7 +48,7 @@
 		<!-- Music Info -->
 		<control type="group">
 			<posx>0</posx>
-			<posy>60</posy>
+			<posy>-110</posy>
 			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
@@ -276,7 +276,7 @@
 		</control>
 		<control type="group">
 			<description>Controls for currently playing media</description>
-			<posx>358</posx>
+			<posx>958</posx>
 			<posy>05</posy>
 			<animation effect="slide" start="0,0" end="365,0" time="300" condition="!Player.HasMedia">conditional</animation>
 			<animation type="WindowOpen" reversible="false">
@@ -434,54 +434,55 @@
 			<control type="group" id="9001">
 				<posx>500</posx>
 				<posy>70</posy>
-				<onup>9000</onup>
+				<onup condition="System.HasAddon(script.globalsearch)">608</onup>
+				<onup condition="!System.HasAddon(script.globalsearch)">603</onup>
 				<ondown>9002</ondown>
 				<control type="grouplist" id="9010">
 					<include>HomeSubMenuCommonValues</include>
-					<onleft>9010</onleft>
-					<onright>9010</onright>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(2)</visible>
 					<include>HomeSubMenuVideos</include> <!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9016">
 					<include>HomeSubMenuCommonValues</include>
-					<onleft>9016</onleft>
-					<onright>9016</onright>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(10)</visible>
 					<include>HomeSubMenuMovies</include> <!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9017">
 					<include>HomeSubMenuCommonValues</include>
-					<onleft>9017</onleft>
-					<onright>9017</onright>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(11)</visible>
 					<include>HomeSubMenuTVShows</include> <!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9011">
 					<include>HomeSubMenuCommonValues</include>
-					<onleft>9011</onleft>
-					<onright>9011</onright>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(3)</visible>
 					<include>HomeSubMenuMusic</include> <!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9012">
 					<include>HomeSubMenuCommonValues</include>
-					<onleft>9012</onleft>
-					<onright>9012</onright>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(5)</visible>
 					<include>HomeSubMenuSystem</include> <!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9013">
 					<include>HomeSubMenuCommonValues</include>
-					<onleft>9013</onleft>
-					<onright>9013</onright>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(6)</visible>
 					<include>HomeSubMenuPlayDisc</include> <!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9014">
 					<include>HomeSubMenuCommonValues</include>
-					<onleft>9013</onleft>
-					<onright>9013</onright>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(4)</visible>
 					<include>HomeSubMenuPictures</include> <!-- Buttons for the grouplist -->
 				</control>
@@ -494,9 +495,8 @@
 				<height>250</height>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
-				<onup condition="System.HasAddon(script.globalsearch)">608</onup>
-				<onup condition="!System.HasAddon(script.globalsearch)">603</onup>
-				<ondown>9001</ondown>
+				<onup>9001</onup>
+				<ondown>9003</ondown>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>300</scrolltime>
 				<focusposition>2</focusposition>
@@ -600,13 +600,12 @@
 		<control type="group" id="9002">
 			<onup>9001</onup>
 			<ondown>20</ondown>
-			<visible>!Control.HasFocus(8000)</visible>
 			<control type="fixedlist" id="700">
 				<animation effect="slide" start="0,0" end="-91,0" time="0" condition="StringCompare(Container(700).NumItems,2) | StringCompare(Container(700).NumItems,4)">conditional</animation>
 				<visible>Container(9000).HasFocus(2) | Container(9000).HasFocus(10) | Container(9000).HasFocus(11)</visible>
 				<onleft>700</onleft>
 				<onright>700</onright>
-				<onup>9001</onup>
+				<onup>9000</onup>
 				<ondown>8000</ondown>
 				<include>HomeAddonsCommonLayout</include>
 				<content>
@@ -666,63 +665,6 @@
 				<textcolor>blue</textcolor>
 				<titlecolor>blue</titlecolor>
 				<headlinecolor>white</headlinecolor>
-			</control>
-		</control>
-		<control type="group" id="10">
-			<posx>20</posx>
-			<posy>55r</posy>
-			<include>Window_OpenClose_Animation</include>
-			<control type="button" id="20">
-				<description>Power push button</description>
-				<posx>55</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<label>31003</label>
-				<font>-</font>
-				<aligny>-</aligny>
-				<onclick>ActivateWindow(ShutdownMenu)</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>21</onleft>
-				<onright>21</onright>
-				<onup>9002</onup>
-				<ondown>9003</ondown>
-			</control>
-			<control type="image">
-				<description>Power Icon</description>
-				<posx>60</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_power.png</texture>
-			</control>
-			<control type="button" id="21">
-				<description>Favourites push button</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
-				<label>1036</label>
-				<font>-</font>
-				<aligny>-</aligny>
-				<onclick>ActivateWindow(Favourites)</onclick>
-				<texturefocus border="5">floor_buttonFO.png</texturefocus>
-				<texturenofocus border="5">floor_button.png</texturenofocus>
-				<onleft>20</onleft>
-				<onright>20</onright>
-				<onup>9002</onup>
-				<ondown>9003</ondown>
-			</control>
-			<control type="image">
-				<description>Favourites Icon</description>
-				<posx>5</posx>
-				<posy>5</posy>
-				<width>35</width>
-				<height>35</height>
-				<aspectratio>keep</aspectratio>
-				<texture>icon_favourites.png</texture>
 			</control>
 		</control>
 		<control type="group">
@@ -795,20 +737,5 @@
 			</control>
 		</control>
 		<include>Clock</include>
-		<control type="label">
-			<description>Date label</description>
-			<posx>20r</posx>
-			<posy>35</posy>
-			<width>200</width>
-			<height>15</height>
-			<align>right</align>
-			<aligny>center</aligny>
-			<font>font10</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<label>$INFO[System.Date]</label>
-			<include>Window_OpenClose_Animation</include>
-			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
-		</control>
 	</controls>	
 </window>

@@ -90,7 +90,7 @@
 		<ondown>9002</ondown>
 		<itemgap>0</itemgap>
 		<orientation>vertical</orientation>
-		<animation effect="fade" start="0" end="100" time="700" delay="400">Visible</animation>
+		<animation effect="fade" start="0" end="100" time="700" delay="600">Visible</animation>
 		<animation effect="fade" start="100" end="0" time="400">Hidden</animation>
 	</include>
 	<include name="ButtonInfoDialogsCommonValues">
@@ -854,7 +854,7 @@
 			<animation effect="slide" start="200,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 		</control>
 	</include>
-	<include name="time">
+	<include nae="time">
 		<control type="label">
 			<description>time label</description>
 			<posx>1136</posx>
