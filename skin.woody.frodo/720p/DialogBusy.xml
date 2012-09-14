@@ -22,6 +22,7 @@
 				<texture>loading/bg/loading_bg.png</texture>
 			</control>
 			<control type="multiimage" id="1">
+				<posx>0</posx>
 				<width>184</width>
 				<height>64</height>
 				<imagepath background="false">loading</imagepath>
