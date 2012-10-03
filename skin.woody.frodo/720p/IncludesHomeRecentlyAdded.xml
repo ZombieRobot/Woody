@@ -58,7 +58,7 @@
 							<posy>21</posy>
 							<width>93</width>
 							<height>138</height>
-							<texture fallback="DefaultVideo.png" diffuse="frames/mask_movie_small.png" background="false">$INFO[ListItem.Thumb]</texture>
+							<texture fallback="DefaultVideo.png" diffuse="frames/mask_movie_small.png" background="false">$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 						</control>	
 						
@@ -89,7 +89,7 @@
 							<posy>21</posy>
 							<width>93</width>
 							<height>138</height>
-							<texture fallback="DefaultVideo.png" diffuse="frames/mask_movie_small.png" background="false">$INFO[ListItem.Thumb]</texture>
+							<texture fallback="DefaultVideo.png" diffuse="frames/mask_movie_small.png" background="false">$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 							<animation effect="zoom" end="109" center="90,85" time="200">Focus</animation>
 						<visible>Control.HasFocus(8000)</visible>
@@ -99,7 +99,7 @@
 							<posy>21</posy>
 							<width>93</width>
 							<height>138</height>
-							<texture fallback="DefaultVideo.png" diffuse="frames/mask_movie_small.png" background="false">$INFO[ListItem.Thumb]</texture>
+							<texture fallback="DefaultVideo.png" diffuse="frames/mask_movie_small.png" background="false">$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 							<animation effect="zoom" end="109" center="90,85" time="200">Focus</animation>
 							<visible>!Control.HasFocus(8000)</visible>

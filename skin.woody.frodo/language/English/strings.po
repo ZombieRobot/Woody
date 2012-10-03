@@ -598,3 +598,6 @@ msgctxt "#31918"
 msgid "Logo/Clearart"
 msgstr ""
 
+msgctxt "#31919"
+msgid "Turn off tutorial"
+msgstr ""

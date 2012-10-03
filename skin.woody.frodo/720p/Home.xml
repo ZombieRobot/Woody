@@ -274,7 +274,7 @@
 			<ondown>608</ondown>
 			<visible>false</visible>
 		</control>
-		<control type="group">
+		<control tye="group">
 			<description>Controls for currently playing media</description>
 			<posx>-60</posx>
 			<posy>205</posy>
@@ -289,7 +289,7 @@
 			</animation>
 			
 			
-			<control type="group" id="600">
+			<control tye="group" id="600">
 				<posx>80</posx>
 				<onup>9003</onup>
 				<ondown>9000</ondown>
@@ -526,6 +526,15 @@
 						<align>center</align>
 						<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(9000)">conditional</animation>
 					</control>
+					<control type="image">
+						<posx>10</posx>
+						<posy>0</posy>
+						<texture>$INFO[Container(9000).ListItem.ActualIcon]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<width>151</width>
+						<height>222</height>
+						<fadetime>1000</fadetime>
+					</control>
 				</focusedlayout>
 				<content>
 					<item id="7">
@@ -554,14 +563,14 @@
 					<item id="10">
 						<label>20342</label>
 						<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-						<icon>-</icon>
+						<icon>home/icons/Videos.png</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>
 					</item>
 					<item id="11">
 						<label>20343</label>
 						<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
-						<icon>-</icon>
+						<icon>home/icons/Videos.png</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>
 					</item>
