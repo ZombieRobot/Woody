@@ -74,6 +74,36 @@
 			<aspect>1.0</aspect>
 		</font>		
 		<font>
+			<name>aller_2_c_26</name>
+			<filename>Aller_2_Caps.ttf</filename>
+			<size>26</size>
+			<aspect>1.0</aspect>
+		</font>
+		<font>
+			<name>aller_3_20</name>
+			<filename>aller_3.ttf</filename>
+			<size>20</size>
+			<aspect>1.0</aspect>
+		</font>
+		<font>
+			<name>aller_3_21</name>
+			<filename>aller_3.ttf</filename>
+			<size>21</size>
+			<aspect>1.0</aspect>
+		</font>
+		<font>
+			<name>aller_3_23</name>
+			<filename>aller_3.ttf</filename>
+			<size>23</size>
+			<aspect>1.0</aspect>
+		</font>
+		<font>
+			<name>aller_3_24</name>
+			<filename>aller_3.ttf</filename>
+			<size>24</size>
+			<aspect>1.0</aspect>
+		</font>
+		<font>
 			<name>aller_4_34</name>
 			<filename>aller_4.ttf</filename>
 			<size>34</size>
@@ -109,6 +139,24 @@
 			<size>17</size>
 			<aspect>1.0</aspect>
 		</font>		
+		<font>
+			<name>aller_2_24</name>
+			<filename>aller_2.ttf</filename>
+			<size>24</size>
+			<aspect>1.0</aspect>
+		</font>
+		<font>
+			<name>aller_4_30</name>
+			<filename>aller_4.ttf</filename>
+			<size>30</size>
+			<aspect>1.0</aspect>
+		</font>
+		<font>
+			<name>aller_4_38</name>
+			<filename>aller_4.ttf</filename>
+			<size>38</size>
+			<aspect>1.0</aspect>
+		</font>
 	<!-- Normal Fonts -->
 	 	<font>
 			<name>font10</name>

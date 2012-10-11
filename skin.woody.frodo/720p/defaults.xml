@@ -5,14 +5,23 @@
 		<texture>-</texture>
 		<colorkey>0</colorkey>
 	</default>
-	<default type="label">
+	<default type="label"> 
+		<description>heading</description>
 		<posx>80</posx>
 		<posy>60</posy>
+		<width>400</width>
+		<font>aller_4_30</font>
+		<align>left</align>
+		<textcolor>FFFFFFFF</textcolor>
+		<posx>0</posx>
+		<posy>0</posy>
 		<label>-</label>
-		<font>font13</font>
-		<textcolor>white</textcolor>
-		<disabledcolor>grey3</disabledcolor>
-	</default>
+		<height>30</height>
+		<aligny>center</aligny>
+		<focusedcolor>blue</focusedcolor>
+		<selectedcolor>greyd</selectedcolor>
+		<scroll>true</scroll>
+  	</default>
 	<default type="fadelabel">
 		<posx>80</posx>
 		<posy>60</posy>
@@ -20,35 +29,35 @@
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>
 	</default>
-	<default type="button">
-		<posx>300</posx>
-		<posy>200</posy>
-		<width>300</width>
-		<height>42</height>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
-		<font>font13</font>
-		<textcolor>white</textcolor>
-		<disabledcolor>grey3</disabledcolor>
-		<textoffsetx>7</textoffsetx>
-		<aligny>center</aligny>
-		<pulseonselect>no</pulseonselect>
-	</default>
+  	<default type="button">  
+    	<posx>0</posx>
+    	<posy>0</posy>
+    	<width>300</width>
+    	<height>30</height>
+    	<align>center</align>
+    	<aligny>center</aligny>
+    	<label>-</label>
+    	<font>aller_4_30</font>
+    	<textcolor>greyl</textcolor>
+    	<focusedcolor>blue</focusedcolor>
+    	<disabledcolor>greyd</disabledcolor>
+    	<pulseonselect>false</pulseonselect>
+  	</default>
 	<default type="togglebutton">
-		<posx>140</posx>
-		<posy>167</posy>
-		<width>20</width>
-		<height>20</height>
-		<texturefocus>scroll-up-focus.png</texturefocus>
-		<texturenofocus>scroll-up.png</texturenofocus>
-		<alttexturefocus>scroll-down-focus.png</alttexturefocus>
-		<alttexturenofocus>scroll-down.png</alttexturenofocus>
-		<textcolor>white</textcolor>
-		<label>-</label>
-		<font>font13</font>
-		<disabledcolor>grey3</disabledcolor>
-		<pulseonselect>no</pulseonselect>
-	</default>
+    	<posx>0</posx>
+    	<posy>0</posy>
+    	<width>150</width>
+    	<height>30</height>
+    	<label>-</label>
+    	<font>aller_4_30</font>
+    	<textcolor>Black</textcolor>
+    	<focusedcolor>White</focusedcolor>
+    	<disabledcolor>Red</disabledcolor>
+    	<align>center</align>
+    	<aligny>center</aligny>
+    	<pulseonselect>false</pulseonselect>
+		<textoffsetx>0</textoffsetx>
+  	</default>
 	<default type="textbox">
 		<posx>220</posx>
 		<posy>220</posy>
@@ -88,44 +97,42 @@
 		<pulseonselect>no</pulseonselect>
 	</default>
 	<default type="spincontrolex">
-		<posx>530</posx>
-		<posy>160</posy>
-		<width>300</width>
-		<height>42</height>
-		<spinwidth>33</spinwidth>
-		<spinheight>22</spinheight>
-		<texturefocus>button-focus.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
-		<textureup>scroll-up-2.png</textureup>
-		<texturedown>scroll-down-2.png</texturedown>
-		<textureupfocus>scroll-up-focus-2.png</textureupfocus>
-		<texturedownfocus>scroll-down-focus-2.png</texturedownfocus>
-		<font>font13</font>
-		<textcolor>white</textcolor>
-		<disabledcolor>grey3</disabledcolor>
-		<textoffsetx>7</textoffsetx>
-		<aligny>center</aligny>
-		<reverse>yes</reverse>
-		<pulseonselect>no</pulseonselect>
-	</default>
-	<default type="radiobutton">
-		<posx>300</posx>
-		<posy>200</posy>
-		<width>300</width>
-		<height>42</height>
-		<radiowidth>08</radiowidth>
-		<radioheight>08</radioheight>
-		<textureradiofocus>radiobutton-focus.png</textureradiofocus>
-		<textureradionofocus>radiobutton-nofocus.png</textureradionofocus>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
-		<label>215</label>
-		<font>font13</font>
-		<textcolor>white</textcolor>
-		<disabledcolor>grey3</disabledcolor>
-		<textoffsetx>7</textoffsetx>
-		<aligny>center</aligny>
-	</default>
+    	<posx>0</posx>
+    	<posy>0</posy>
+    	<width>500</width>
+    	<height>30</height>
+		<font>aller_3_24</font>
+    	<textureup>ArrowUpNF.png</textureup>
+    	<texturedown>ArrowDownNF.png</texturedown>
+    	<textureupfocus>ArrowUpFo.png</textureupfocus>
+    	<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+		<spinwidth>20</spinwidth>
+		<spinheight>12</spinheight>
+    	<textcolor>greyl</textcolor>
+		<focusedcolor>blue</focusedcolor>
+    	<disabledcolor>greyd</disabledcolor>
+		<align>left</align>
+    	<aligny>center</aligny>
+    	<reverse>yes</reverse>
+    	<pulseonselect>false</pulseonselect>
+  	</default>
+  	<default type="radiobutton">
+    	<posx>0</posx>
+    	<posy>0</posy>
+    	<width>150</width>
+    	<height>30</height>
+    	<aligny>center</aligny>
+		<font>aller_2_24</font>
+    	<textcolor>greyl</textcolor>
+		<focusedcolor>greyd</focusedcolor>
+    	<align>left</align>
+    	<disabledcolor>FF444444</disabledcolor>
+    	<pulseonselect>false</pulseonselect>
+    	<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
+    	<textureradionofocus>RadiobuttonNF.png</textureradionofocus>
+    	<radiowidth>12</radiowidth>
+    	<radioheight>12</radioheight>
+  	</default>
 	<default type="selectbutton">
 		<posx>490</posx>
 		<posy>335</posy>
