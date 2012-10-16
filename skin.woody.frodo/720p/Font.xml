@@ -56,6 +56,12 @@
 			<aspect>1.0</aspect>
 		</font>	
 		<font>
+			<name>homemusicinfo</name>
+			<filename>aller_1.ttf</filename>
+			<size>16</size>
+			<aspect>1.0</aspect>
+		</font>	
+		<font>
 			<name>homesubmenu</name>
 			<filename>aller_1.ttf</filename>
 			<size>26</size>
@@ -115,6 +121,12 @@
 			<size>41</size>
 			<aspect>1.0</aspect>
 		</font>		
+		<font>
+			<name>aller_4_48</name>
+			<filename>aller_4.ttf</filename>
+			<size>48</size>
+			<aspect>1.0</aspect>
+		</font>
 		<font>
 			<name>Text_plot</name>
 			<filename>aller_2.ttf</filename>

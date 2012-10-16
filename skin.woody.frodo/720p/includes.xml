@@ -256,7 +256,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="CommonNowPlaying">
+	<!--include name="CommonNowPlaying">
 		<control type="group">
 			<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
 			<include>VisibleFadeEffect</include>
@@ -353,7 +353,7 @@
 				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
 			</control>
 		</control>
-	</include>
+	</include-->
 	<include name="CommonPageCount">
 		<control type="group">
 			<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
@@ -856,6 +856,96 @@
 			</control>
 		</control>
 	</include>
+		<!-- Music Info -->
+	<include name="nowplaying_widget">
+		<control type="group">
+			<posx>0</posx>
+			<posy>-50</posy>
+			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
+			<visible>!SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
+			<include>VisibleFadeEffect</include>
+			<animation effect="slide" start="0" end="-115,-65" time="0" condition="Control.IsVisible(503)">Conditional</animation>
+			<animation effect="slide" start="0" end="-0,560" time="0" condition="Control.IsVisible(501)">Conditional</animation>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="1600" delay="1000" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="100" delay="100" />
+			</animation>
+			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+			
+			<control type="image">
+				<description>Cover image</description>
+				<posx>120r</posx>
+				<posy>25</posy>
+				<width>78</width>
+				<height>177</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+				<bordertexture border="8">ThumbBorder.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="image">
+				<posx>127r</posx>
+				<posy>124</posy>
+				<width>4</width>
+				<height>80</height>
+				<aspectratio>scale</aspectratio>
+				<colordiffuse>EAFFFFFF</colordiffuse>
+				<aligny>center</aligny>
+				<texture>greystroke.png</texture>
+			</control>	
+			<control type="label">
+				<description>Album Label</description>
+				<posx>131r</posx>
+				<posy>130</posy>
+				<height>25</height>
+				<width>400</width>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>homemusicinfo</font>
+				<textcolor>58353533</textcolor>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<posx>131r</posx>
+				<posy>147</posy>
+				<height>30</height>
+				<width>1000</width>
+				<label>$INFO[MusicPlayer.Title]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>homemusicinfo</font>
+				<textcolor>greyd</textcolor>
+			</control>
+			<!--control type="label">
+				<description>Title label</description>
+				<posx>131r</posx>
+				<posy>147</posy>
+				<height>30</height>
+				<width>1000</width>
+				<label>$LOCALIZE[209]: $INFO[MusicPlayer.offset(1).Artist,]$INFO[MusicPlayer.offset(1).Title, - ] ($INFO[MusicPlayer.PlaylistPosition,]$INFO[MusicPlayer.PlaylistLength,/])</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>homemusicinfo</font>
+				<textcolor>greyd</textcolor>
+				<visible>!IsEmpty(MusicPlayer.offset(1).Title)</visible>
+			</control-->	
+			<control type="label">
+				<description>Time Label</description>
+				<posx>131r</posx>
+				<posy>170</posy>
+				<height>30</height>
+				<width>300</width>
+				<label>$INFO[MusicPlayer.TimeRemaining(mm:ss)]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>homemusicinfo</font>
+				<textcolor>58353533</textcolor>
+			</control>
+		</control>
+	</include>	
 	<include name="Clock">
 		<control type="label">
 			<description>time label</description>

@@ -44,7 +44,7 @@
 		<info>Player.Volume</info>
   	</control>
 	<control type="label" id="0">
-		<posx>615</posx>
+		<posx>441</posx>
 		<posy>-65</posy>
 		<align>center</align>
 		<font>aller_4_20</font>

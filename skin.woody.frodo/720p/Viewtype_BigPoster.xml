@@ -1,11 +1,11 @@
 <includes>
 	<include name="BigPoster">
+		
 <!--Background-->		
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
 			<visible>Control.IsVisible(508)</visible>
-			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<posx>0</posx>
 				<posy>537</posy>
@@ -25,6 +25,7 @@
 				<texture>bg_grey_center.png</texture>
 			</control>	
 		</control>
+		<include>nowplaying_widget</include>
 <!--Big Poster-->		
 		<control type="group">
 			<visible>Control.IsVisible(508)</visible>
@@ -375,22 +376,22 @@
 
 <!--IMDB Rating-->
 			<control type="group">
-				<posx>0</posx>
-				<posy>0</posy>
+				<posx>60</posx>
+				<posy>20</posy>
 				<include>VisibleFadeEffect</include>
 				<animation effect="slide" end="-200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 				<animation effect="slide" start="-200,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>	
 				<control type="label">
 					<posx>-49</posx>
-					<posy>19</posy>
+					<posy>5</posy>
 					<font>Small2</font>
 					<align>right</align>
-					<label>IMDB</label>
+					<label>31921</label>
 					<textcolor>greyl</textcolor>
 					<visible>!Container.Content(seasons)</visible>
 				</control>
 				<control type="label">
-					<posx>3</posx>
+					<posx>-49</posx>
 					<posy>36</posy>
 					<width>90</width>
 					<scroll>false</scroll>
@@ -419,7 +420,8 @@
 					<texture>greystroke.png</texture>
 				</control>			
 				<control type="label">
-					<posx>6</posx>
+					<posx>106</posx>
+					<posy>63</posy>
 					<font>Small1</font>
 					<textcolor>58353533</textcolor>
 					<align>right</align>
@@ -427,7 +429,7 @@
 				</control>
 				<control type="label">
 					<description>Page Count Label</description>
-					<posx>66</posx>
+					<posx>106</posx>
 					<posy>90</posy>
 					<font>medium</font>
 					<textcolor>58353533</textcolor>
@@ -454,7 +456,8 @@
 					<texture>greystroke.png</texture>
 				</control>	
 				<control type="label">
-					<posx>6</posx>
+					<posx>106</posx>
+					<posy>63</posy>
 					<font>Small1</font>
 					<textcolor>58353533</textcolor>
 					<align>right</align>
@@ -462,7 +465,7 @@
 				</control>
 				<control type="label">
 					<description>Page Count Label</description>
-					<posx>66</posx>
+					<posx>106</posx>
 					<posy>90</posy>
 					<font>medium</font>
 					<textcolor>58353533</textcolor>

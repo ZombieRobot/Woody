@@ -32,77 +32,8 @@
 		<include>MainWindowMouseButtons</include>
 <!--Tutorial--> 
 		<include condition="Skin.HasSetting(tutorial)">tutorial</include>		
-		
-		<control tye="image">
-			<description>LOGO</description>
-			<posx>0</posx>
-			<posy>5</posy>
-			<width>170</width>
-			<height>100</height>
-			<aspectratio aligny="top" align="left">keep</aspectratio>
-			<texture>xbmc-logo.png</texture>
-			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>
-			<visible>!Skin.HasSetting(homepageWeatherinfo)</visible>
-		</control>
-		<!-- Music Info -->
-		<control type="group">
-			<posx>0</posx>
-			<posy>-110</posy>
-			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
-			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>
-			<control type="image">
-				<description>Cover image</description>
-				<posx>20</posx>
-				<posy>45</posy>
-				<width>130</width>
-				<height>295</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<texture>$INFO[MusicPlayer.Cover]</texture>
-				<bordertexture border="8">ThumbBorder.png</bordertexture>
-				<bordersize>5</bordersize>
-			</control>
-			<control type="label">
-				<description>Album Label</description>
-				<posx>170</posx>
-				<posy>265</posy>
-				<height>25</height>
-				<width>1000</width>
-				<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<description>Title label</description>
-				<posx>170</posx>
-				<posy>285</posy>
-				<height>30</height>
-				<width>1000</width>
-				<label>$INFO[MusicPlayer.Title]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font13_title</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<description>Time Label</description>
-				<posx>170</posx>
-				<posy>310</posy>
-				<height>30</height>
-				<width>300</width>
-				<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-		</control>
+		<include>nowplaying widget</include>
+	
 		<!-- Video Info -->
 		<control type="group">
 			<posx>0</posx>
@@ -433,8 +364,8 @@
 			</animation>
 			<control type="group" id="9001">
 				<posx>500</posx>
-				<posy>70</posy>
-				<animation effect= "fade" start="100" end="0" time="700" delay="600" condition="Control.HasFocus(9000)">Conditional</animation>
+			<posy>70</posy>
+				
 				<onup condition="System.HasAddon(script.globalsearch)">608</onup>
 				<onup condition="!System.HasAddon(script.globalsearch)">603</onup>
 				<ondown>9000</ondown>
@@ -443,7 +374,7 @@
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<visible>Container(9000).HasFocus(2)</visible>
-					<include>HomeSubMenuVideos</include> <!-- Buttons for the grouplist -->
+					<include></include> <!-- Buttons for the grouplist -->
 				</control>
 				<control type="grouplist" id="9016">
 					<include>HomeSubMenuCommonValues</include>
@@ -491,7 +422,7 @@
 		
 			<control type="fixedlist" id="9000">
 				<posx>-220</posx>
-				<posy>470</posy>
+				<posy>455</posy>
 				<width>1520</width>
 				<height>250</height>
 				<onleft>9000</onleft>
@@ -505,11 +436,11 @@
 				<orientation>Horizontal</orientation>
 				<itemlayout height="80" width="380">
 					<control type="label">
-						<posx>100</posx>
-						<posy>0</posy>
+						<posx>102</posx>
+						<posy>17</posy>
 						<width>350</width>
 						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-						<font>Medium123</font>
+						<font>aller_4_48</font>
 						<textcolor>greyl</textcolor>
 						<scroll>false</scroll>
 						<align>center</align>
@@ -517,11 +448,11 @@
 				</itemlayout>
 				<focusedlayout height="80" width="380">
 					<control type="label">
-						<posx>100</posx>
-						<posy>0</posy>
+						<posx>102</posx>
+						<posy>17</posy>
 						<width>350</width>
 						<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
-						<font>Medium123</font>
+						<font>aller_4_48</font>
 						<textcolor>greyd</textcolor>
 						<align>center</align>
 						<animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(9000)">conditional</animation>
@@ -664,7 +595,7 @@
 			<posy>207r</posy>
 			<visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
 			<include>Window_OpenClose_Animation</include>
-			<control type="rss">
+			<!--control type="rss">
 				<description>RSS feed</description>
 				<posx>100</posx>
 				<posy>0</posy>
@@ -675,7 +606,7 @@
 				<textcolor>blue</textcolor>
 				<titlecolor>blue</titlecolor>
 				<headlinecolor>white</headlinecolor>
-			</control>
+			</control-->
 		</control>
 		<control type="group">
 			<posx>20</posx>

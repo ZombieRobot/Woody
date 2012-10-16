@@ -33,10 +33,9 @@
 					<colordiffuse>DDFFFFFF</colordiffuse>
 					<aligny>center</aligny>
 					<texture>grey.png</texture>
-					
-				</control>
-							
+				</control>	
 			</control>	
+		
 		<control type="grouplist">
 			<visible>Control.IsVisible(501)</visible>
 			<posx>420</posx>
@@ -44,7 +43,6 @@
 			<onup>9000</onup>
 			<ondown>61</ondown>
 			<include>VisibleFadeEffect</include>
-
 			<control type="panel" id="501">
 				<visible>Container.Content(Movies) | Container.Content(Seasons) | [Container.Content(TVShows) + Skin.HasSetting(TVShowsUsePosters)]</visible>
 				<visible>!Container.Content(LiveTV)</visible>
@@ -127,11 +125,12 @@
 		</control>
 
 		<control type="group">
+			<include>nowplaying_widget</include>	
 			<visible>Control.IsVisible(501) + Container.Content(Movies)</visible>
 			<control type="label">
 				<posx>440</posx>
 				<posy>610</posy>
-				<width>790</width>
+				<width>690</width>
 				<height>20</height>
 				<font>Medium123</font>
 				<textcolor>greyd</textcolor>
@@ -146,8 +145,8 @@
 			<posy>587</posy>
 			<visible>Control.IsVisible(501) + Container.Content(Movies)</visible>
 			<include>VisibleFadeEffect</include>
-			<animation effect="slide" end="200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="200,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="0,200" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="0,200" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<control type="image">
 				<posx>439</posx>
 				<posy>35</posy>
@@ -159,19 +158,20 @@
 				<texture>greystroke1_h.png</texture>
 			</control>			
 			<control type="label">
-				<posx>440</posx>
+				<posx>437</posx>
+				<posy>63</posy>
 				<font>Small1</font>
 				<textcolor>58353533</textcolor>
-				<align>right</align>
+				<align>left</align>
 				<label>31910</label>
 			</control>
 			<control type="label">
 				<description>Page Count Label</description>
-				<posx>440</posx>
+				<posx>437</posx>
 				<posy>90</posy>
 				<font>medium</font>
 				<textcolor>58353533</textcolor>
-				<align>right</align>
+				<align>left</align>
 				<label>$INFO[Container.NumItems,]</label>
 			</control>						
 		</control>		
@@ -180,8 +180,8 @@
 			<posy>587</posy>
 			<visible>Control.IsVisible(501) + Container.Content(TVShows)</visible>
 			<include>VisibleFadeEffect</include>
-			<animation effect="slide" end="200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="200,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" end="0,200" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="0,200" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<control type="image">
 				<posx>439</posx>
 				<posy>35</posy>
@@ -193,19 +193,20 @@
 				<texture>whitestroke_v.png</texture>
 			</control>			
 			<control type="label">
-				<posx>440</posx>
+				<posx>437</posx>
+				<posy>63</posy>
 				<font>Small1</font>
 				<textcolor>58353533</textcolor>
-				<align>right</align>
+				<align>left</align>
 				<label>31911</label>
 			</control>
 			<control type="label">
 				<description>Page Count Label</description>
-				<posx>440</posx>
+				<posx>437</posx>
 				<posy>90</posy>
 				<font>medium</font>
 				<textcolor>58353533</textcolor>
-				<align>right</align>
+				<align>left</align>
 				<label>$INFO[Container.NumItems,]</label>
 			</control>						
 		</control>				
@@ -456,11 +457,9 @@
 				<colordiffuse>EAFFFFFF</colordiffuse>
 				<aligny>center</aligny>
 				<texture>bg_grey_center.png</texture>
-			
 			</control>	
-			
-		
 		</control>		
+		<include>nowplaying_widget</include>		
 		<control type="Wraplist" id="503">
 				<posx>-54</posx>
 				<posy>45</posy>
@@ -685,18 +684,18 @@
 			</control>
 			
 			<control type="group">
-				<posx>35</posx>
-				<posy>-145</posy>
+				<posx>480</posx>
+				<posy>-132</posy>
 				<include>VisibleFadeEffect</include>
-				<animation effect="slide" end="-200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-				<animation effect="slide" start="-200,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" end="0,-200" time="400" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="0,-200" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 		<!--IMDB Rating-->
 				<control type="label">
-					<posx>80</posx>
-					<posy>162</posy>
+					<posx>135</posx>
+					<posy>152</posy>
 					<font>Small2</font>
 					<align>right</align>
-					<label>IMDB</label>
+					<label>31921</label>
 					<textcolor>greyl</textcolor>
 					<visible>!Container.Content(seasons)</visible>
 				</control>
@@ -707,7 +706,7 @@
 					<scroll>false</scroll>
 					<font>Medium1</font>
 					<align>right</align>
-						<label>$INFO[ListItem.Rating]</label>
+					<label>$INFO[ListItem.Rating]</label>
 					<textcolor>greyd</textcolor>
 				</control>	
 			</control>	
@@ -731,7 +730,8 @@
 					<texture>greystroke.png</texture>
 				</control>	
 				<control type="label">
-					<posx>46</posx>
+					<posx>146</posx>
+					<posy>65</posy>
 					<font>Small1</font>
 					<textcolor>58353533</textcolor>
 					<align>right</align>
@@ -739,7 +739,7 @@
 				</control>
 				<control type="label">
 					<description>Page Count Label</description>
-					<posx>106</posx>
+					<posx>146</posx>
 					<posy>90</posy>
 					<font>medium</font>
 					<textcolor>58353533</textcolor>
@@ -768,7 +768,8 @@
 					<texture>greystroke.png</texture>
 				</control>	
 				<control type="label">
-					<posx>46</posx>
+					<posx>146</posx>
+					<posy>65</posy>
 					<font>Small1</font>
 					<textcolor>58353533</textcolor>
 					<align>right</align>
@@ -776,7 +777,7 @@
 				</control>
 				<control type="label">
 					<description>Page Count Label</description>
-					<posx>106</posx>
+					<posx>146</posx>
 					<posy>90</posy>
 					<font>medium</font>
 					<textcolor>58353533</textcolor>

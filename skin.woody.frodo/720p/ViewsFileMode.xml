@@ -4,6 +4,7 @@
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>
 			<include>VisibleFadeEffect</include>
+			
 <!--Background Vertical-->
 
 <!--fullwidthlistn, wideicon-->
@@ -38,6 +39,7 @@
 					<texture>grey.png</texture>
 				</control>		
 			</control>	
+			<include>nowplaying_widget</include>
 			<control type="fixedlist" id="50">
 				<posx>390</posx>
 				<posy>70</posy>

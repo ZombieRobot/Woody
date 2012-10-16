@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="skin.woody.frodo"
-  version="0.0.1"
+  version="0.1.0"
   name="Woody For Frodo"
   provider-name="ZombieRobot">
   <requires>
@@ -17,7 +17,7 @@
   <extension point="xbmc.addon.metadata">
     <summary lang="bg">Облик Confluence от Jezz_X. (стандартния облик на XBMC)</summary>
     <summary lang="ca">Aparença Confluence, per Jezz_X. (Aparença per defecte de l'XBMC)</summary>
-    <summary lang="en">Confluence skin by Jezz_X. (XBMC's default skin)</summary>
+    <summary lang="en">Woody skin by ZombieRobot. (Woody a Plex skin by Timthing ported tp XBMC)</summary>
     <summary lang="es">Confluence skin por Jezz_X. (skin por defecto)</summary>
     <summary lang="fi">Confluence-ulkoasu Jezz_X:ltä. (XBMC:n oletus ulkoasu)</summary>
     <summary lang="fr">Skin Confluence par Jezz_X. (skin par défaut)</summary>
@@ -31,7 +31,7 @@
     <summary lang="zh">Jezz_X开发的Confluence皮肤</summary>
     <description lang="bg">Confluence е стандартният облик на XBMC 9.11 и по-новите версии. Представлява смесица от концепциите на много от популярните облици. Целта е да се интегрират тези добри идеи в подходящ и удобен вид за хора, които се сблъскват за първи път с XBMC.</description>
     <description lang="ca">Confluence és l'aparença per defecte de l'XBMC 9.11 i superior. És una combinació de conceptes de moltes aparences populars, i intenta adoptar i integrar les seves bones idees en una aparença que sigui senzilla d'entendre i utilitzar per els nous usuaris d'XBMC.</description>
-    <description lang="en">Confluence is the default skin for XBMC 9.11 and above. It is a combination of concepts from many popular skins, and attempts to embrace and integrate their good ideas into a skin that should be easy for first time XBMC users to understand and use.</description>
+    <description lang="en">Woody a plex skin for XBMC</description>
     <description lang="es">Confluence es la skin por defecto de XBMC 9.11 y posteriores. Es una combinación de conceptos de muchas skins populares, e intenta abarcare e integrar lo mejor de ellas en una skin que sea sencilla de entender y utilizar para los nuevos usuarios de XBMC.</description>
     <description lang="fi">Confluence on oletus ulkoasu XBMC:n versiosta 9.11 lähtien. Se on yhdistelmä useiden suosittujen ulkoasujen konsepteista, ja yritys omaksua ja integroida heidän hyvät ideat ulkoasuun, jonka pitäisi olla helppokäyttöinen ja -tajuinen kaikille XBMC:n käyttäjille.</description>
     <description lang="fr">Confluence est le skin par défaut de XBMC 9.11 ou supérieur. C'est un condensé d'idées de plusieurs skins populaires. Il tente d'englober et intégrer toutes les bonnes idées que n'importe quel débutant sur XBMC pourrait utiliser avec facilité.</description>
