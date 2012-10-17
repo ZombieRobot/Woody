@@ -473,6 +473,19 @@
 						<texturefocus>MenuItemFO.png</texturefocus>
 						<texturenofocus>MenuItemNF.png</texturenofocus>
 					</control>
+					<control type="radiobutton" id="207">
+						<description>No woodgrain in background</description>
+						<width>750</width>
+						<height>40</height>
+						<font>font13</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>31922</label>
+						<onclick>Skin.ToggleSetting(NoWoodgrain)</onclick>
+						<selected>Skin.HasSetting(NoWoodgrain)</selected>
+						<texturefocus>MenuItemFO.png</texturefocus>
+						<texturenofocus>MenuItemNF.png</texturenofocus>
+					</control>
 					<control type="label" id="220">
 						<width>750</width>
 						<height>45</height>

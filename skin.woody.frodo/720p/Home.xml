@@ -27,12 +27,12 @@
 				<colordiffuse>EAFFFFFF</colordiffuse>
 				<aligny>center</aligny>
 				<texture>bg_grey_center.png</texture>
-			</control>	
+			</control>
 		</control>
 		<include>MainWindowMouseButtons</include>
 <!--Tutorial--> 
 		<include condition="Skin.HasSetting(tutorial)">tutorial</include>		
-		<include>nowplaying widget</include>
+		<include>nowplaying_widget</include>
 	
 		<!-- Video Info -->
 		<control type="group">

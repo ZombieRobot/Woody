@@ -3,7 +3,10 @@
 	<include file="defaults.xml" />
 	<include file="ViewsVideoLibrary.xml" />
 	<include file="ViewsMusicLibrary.xml" />
-	<include file="Viewtype_BigPoster.xml" />
+	<include file="Viewtype_500_Wall.xml" />
+	<include file="Viewtype_501_HalfWall.xml" />
+	<include file="Viewtype_503_BigSlide.xml" />
+	<include file="Viewtype_508_BigPoster.xml" />
 	<include file="ViewsFileMode.xml" />
 	<include file="ViewsPictures.xml" />
 	<include file="ViewsAddonBrowser.xml" />

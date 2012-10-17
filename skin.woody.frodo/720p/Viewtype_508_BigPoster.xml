@@ -246,13 +246,7 @@
 					<autoscroll time="1000" delay="0" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
-		
-			<control tye="group">
-				<posx>40</posx>
-				<posy>200</posy>
-				<include>VisibleFadeEffect</include>
-				
-			</control>
+
 			<control type="group">
 				<posx>40</posx>
 				<posy>50</posy>
@@ -498,7 +492,7 @@
 			<control type="grouplist">
 				<description>MPAA Rating Flagging Images</description>
 				<include>VisibleFadeEffect</include>
-				<posx>0</posx>
+				<posx>-50</posx>
 				<posy>10</posy>
 				<width>800</width>
 				<align>right</align>

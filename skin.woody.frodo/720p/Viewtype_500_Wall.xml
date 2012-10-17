@@ -1,0 +1,296 @@
+<includes>
+		<include name="Wall">
+		<control type="group">
+			<visible>Control.IsVisible(500)</visible>
+			<include>VisibleFadeEffect</include>
+		
+			<control type="image">
+				<posx>0</posx>
+				<posy>537</posy>
+				<width>1280</width>
+				<height>183</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>wood_bg_h.png</texture>
+				<visible>!Skin.HasSetting(homepagedark)</visible>
+			</control>	
+			<control type="image">
+				<posx>0</posx>
+				<posy>537</posy>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>dark_bg.jpg</texture>
+				<visible>Skin.HasSetting(homepagedark)</visible>
+			</control>				
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>660</height>
+				<aspectratio>scale</aspectratio>
+				<colordiffuse>EAFFFFFF</colordiffuse>
+				<aligny>center</aligny>
+				<texture>bg_grey_center.png</texture>
+				<visible>!Skin.HasSetting(light_bg)</visible>
+			</control>	
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>660</height>
+				<aspectratio>scale</aspectratio>
+				<colordiffuse>EAFFFFFF</colordiffuse>
+				<aligny>center</aligny>
+				<texture>bg_grey_center2.png</texture>
+				<visible>Skin.HasSetting(light_bg)</visible>
+			</control>		
+			<control type="group">
+				<posx>-10</posx>
+				<posy>380</posy>
+				<include>VisibleFadeEffect</include>
+				<visible>Container.Content(Movies)</visible>
+				<animation effect="slide" end="200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="200,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+
+				<control type="image">
+					<posx>1135</posx>
+					<posy>52</posy>
+					<width>4</width>
+					<height>80</height>
+					<aspectratio>scale</aspectratio>
+					<colordiffuse>EAFFFFFF</colordiffuse>
+					<aligny>center</aligny>
+					<texture>greystroke.png</texture>
+				</control>	
+				<control type="label">
+					<posx>1146</posx>
+					<font>Small1</font>
+					<textcolor>58353533</textcolor>
+					<align>left</align>
+					<label>31910</label>
+				</control>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>1146</posx>
+					<posy>90</posy>
+					<font>medium</font>
+					<textcolor>58353533</textcolor>
+					<align>left</align>
+					<label>$INFO[Container.NumItems,]</label>
+				</control>						
+			</control>		
+	
+						
+			<control type="group">
+				<posx>-10</posx>
+				<posy>380</posy>
+				<include>VisibleFadeEffect</include>
+				<visible>Container.Content(TVShows)</visible>
+				<animation effect="slide" end="200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+				<animation effect="slide" start="200,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+				<control type="image">
+					<posx>1135</posx>
+					<posy>52</posy>
+					<width>4</width>
+					<height>80</height>
+					<aspectratio>scale</aspectratio>
+					<colordiffuse>EAFFFFFF</colordiffuse>
+					<aligny>center</aligny>
+					<texture>greystroke.png</texture>
+				</control>	
+				<control type="label">
+					<posx>1146</posx>
+					<font>Small1</font>
+					<textcolor>58353533</textcolor>
+					<align>left</align>
+					<label>31911</label>
+				</control>
+				<control type="label">
+					<description>Page Count Label</description>
+					<posx>1146</posx>
+					<posy>90</posy>
+					<font>medium</font>
+					<textcolor>58353533</textcolor>
+					<align>left</align>
+					<label>$INFO[Container.NumItems,]</label>
+				</control>						
+			</control>	
+			<control type="textbox">
+				<description>Description Value for Video</description>
+				<posx>185</posx>
+				<posy>622</posy>
+				<width>950</width>
+				<height>80</height>
+				<font>font12</font>
+				<align>justify</align>
+				<textcolor>white</textcolor>
+				<label>$INFO[ListItem.Plot]</label>
+				<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+			</control>
+<!--Title Label-->	
+			<control type="label">
+				<posx>185</posx>
+				<posy>556</posy>
+				<width>720</width>
+				<height>30</height>
+				<font>aller_4_34</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+			</control>			
+<!--Duration / Director / Genre / Cast-->	
+			<control type="label">
+				<posx>185</posx>
+				<posy>593</posy>
+				<width>950</width>
+				<font>Thin</font>
+				<label>$INFO[ListItem.Duration] / [UPPERCASE]$INFO[ListItem.Genre] / $INFO[ListItem.Director] / $INFO[ListItem.Cast][/UPPERCASE]</label>
+				<textcolor>FFFFFFFF</textcolor>
+				<visible>Container.Content(movies)</visible>
+			</control>
+<!--Studiologo-->
+			<control type="image">
+				<posx>10</posx>
+				<posy>580</posy>
+				<width>165</width>
+				<height>90</height>
+				<align>left</align>
+				<texture>$INFO[listitem.Studio,flagging/studios/,.png]</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio align="center">keep</aspectratio>
+			</control>		
+	
+			<control type="grouplist">
+				<description>MPAA Rating Flagging Images</description>
+				<posx>1160</posx>
+				<posy>613</posy>
+				<width>80</width>
+				<height>45</height>
+				<align>left</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>VideoMPAAFlaggingConditions</include>
+			</control>
+<!--IMDB Rating-->
+			<control type="label">
+				<posx>1150</posx>
+				<posy>162</posy>
+				<font>Small2</font>
+				<align>left</align>
+				<label>31921</label>
+				<textcolor>greyl</textcolor>
+				<visible>!Container.Content(seasons)</visible>
+			</control>
+			<control type="label">
+				<posx>1150</posx>
+				<posy>195</posy>
+				<width>90</width>
+				<scroll>false</scroll>
+				<font>Medium1</font>
+				<align>left</align>
+				<label>$INFO[ListItem.Rating]</label>
+				<textcolor>greyd</textcolor>
+			</control>		
+			<control type="image">
+				<visible>Control.IsVisible(500)</visible>
+				<posx>1165</posx>
+				<posy>610</posy>
+				<width>80</width>
+				<height>45</height>
+				<align>left</align>
+				<texture>$INFO[listitem.Mpaa,flagging/contentrating/,.png]</texture>
+				<colordiffuse>FFFFFFFF</colordiffuse>
+				<aspectratio align="center">keep</aspectratio>
+			</control>	
+			<control type="panel" id="500">
+				<visible>!Container.Content(episodes)</visible>
+				<posx>40</posx>
+				<posy>48</posy>
+				<width>1041</width>
+				<height>688</height>
+				<onleft>500</onleft>
+				<onright>500</onright>
+				<onup>2</onup>
+				<ondown>60</ondown>
+				<viewtype label="21371">list</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<preloaditems>2</preloaditems>
+				<itemlayout height="243" width="175">
+<!--movie cover, glass and border-->		
+				
+				<control type="image">
+					<posx>5</posx>
+					<posy>3</posy>
+					<width>155</width>
+					<height>229</height>
+					<texture background="true">posterframeBlue.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<include>Animation_PosterFocusZoom</include>
+					<colordiffuse>black</colordiffuse>
+				</control>					
+				<control type="image">
+					<posx>10</posx>
+					<posy>8</posy>
+					<width>145</width>
+					<height>218</height>
+					<texture background="true" diffuse="bigPosterMask.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<info>ListItem.Icon</info>
+				</control>	
+
+				</itemlayout>
+				<focusedlayout height="243" width="175">
+<!--movie cover, glass and border-->		
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>-3</posy>
+					<width>164</width>
+					<height>240</height>
+					<texture border="20" background="true">posterframeBlue.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation effect="zoom" end="105" center="90,185" time="200">Focus</animation>
+				<visible>!Container.Content(seasons)</visible>
+				</control>	
+				<control type="image">
+					<posx>10</posx>
+					<posy>8</posy>
+					<width>145</width>
+					<height>218</height>
+					<texture background="true" diffuse="bigPosterMask.png">defaultvideo.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<animation effect="zoom" end="105" center="90,185" time="200">Focus</animation>
+					<info>ListItem.Icon</info>
+					<visible>!Container.Content(seasons)</visible>
+				</control>	
+
+
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<description>banner_v</description>
+				<posx>30</posx>
+				<posy>524</posy>
+				<height>18</height>
+				<width>1220</width>
+				<onup>500</onup>
+				<ondown>2</ondown>
+				<visible allowhiddenfocus="true">!Control.HasFocus(500)</visible>
+				<showonepage>true</showonepage>
+				<orientation>horizontal</orientation>
+				<texturesliderbackground border="8,1,8,1">scrollBackgroundHorizontal.png</texturesliderbackground>
+				<texturesliderbar border="10,1,10,1">scrollbarGripHorizontal.png</texturesliderbar>
+				<texturesliderbarfocus border="10,1,10,1">scrollbarGripHorizontal.png</texturesliderbarfocus>
+				<textureslidernib border="1">-</textureslidernib>
+				<textureslidernibfocus border="1">-</textureslidernibfocus>
+				<include>VisibleFadeEffect</include>
+				<visible>Control.IsVisible(500)</visible>
+			</control>		
+		</control>
+	</include>
+</includes>
