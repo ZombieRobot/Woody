@@ -56,6 +56,18 @@
 			<aspect>1.0</aspect>
 		</font>	
 		<font>
+			<name>videoscantitle</name>
+			<filename>aller_3.ttf</filename>
+			<size>16</size>
+			<aspect>1.0</aspect>
+		</font>	
+		<font>
+			<name>videoscan</name>
+			<filename>aller_1.ttf</filename>
+			<size>14</size>
+			<aspect>1.0</aspect>
+		</font>	
+		<font>
 			<name>homemusicinfo</name>
 			<filename>aller_1.ttf</filename>
 			<size>16</size>
