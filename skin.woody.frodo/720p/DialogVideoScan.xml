@@ -4,9 +4,10 @@
 		<animation effect="slide" start="0,0" end="0,-70" delay="400" time="100">WindowClose</animation>
 	<controls>
 		<control type="group">
-			<posx>720</posx>
-			<posy>330</posy>
-			<animation effect="slide" end="0,-80" time="200" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">conditional</animation>
+			<posx>442</posx>
+			<posy>35</posy>
+			<animation effect="slide" end="0,-100" time="200" condition="Window.IsVisible(FullscreenVideo) | Window.IsVisible(Visualisation)">conditional</animation>
+			<animation effect="slide" end="0,100" time="200" condition="Window.IsActive(104)">conditional</animation>
 			<control type="image">
 				<posx>0</posx>
 				<posy>-10</posy>

@@ -609,3 +609,7 @@ msgstr ""
 msgctxt "#31921"
 msgid "IMDB"
 msgstr ""
+
+msgctxt "#31922"
+msgid "Remove Wood Grain Background"
+msgstr ""

@@ -1,6 +1,10 @@
 
+[B]0.2.0[/B]
+
+- DialogVideoscan.xml Complete
+- DialogVolumeBar.xml Complete
+
 
 [B]0.1.0[/B]
 
-- Added global now playing widget to home screen and all views
-- Home menu 90% complete 
+- Initial Commit to the SVN
