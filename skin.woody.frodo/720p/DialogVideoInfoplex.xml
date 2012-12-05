@@ -12,6 +12,7 @@
 </coordinates>
   
 <controls>
+  
 	<control type="image">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -21,99 +22,37 @@
 		<aspectratio>stretch</aspectratio>
 	</control>
 	<control type="image">
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>920</height>
-		<aspectratio scalediffuse="false">stretch</aspectratio>
-		<colordiffuse>DDFFFFFF</colordiffuse>
-		<aligny>center</aligny>
-		<texture>bg_grey_center.png</texture>
-	</control>		
-	<control tye="image">
-		<posx>0</posx>
-		<posy>708</posy>
-		<width>1280</width>
-		<height>183</height>
-		<aspectratio>stretch</aspectratio>
-		<texture>wood_bg_h.png</texture>
-	</control>	
-	<control tye="image">
-		<posx>0</posx>
-		<posy>-173</posy>
-		<width>1280</width>
-		<height>183</height>
-		<aspectratio>stretch</aspectratio>
-		<texture flipy="true">wood_bg_h.png</texture>
-	</control>	
-	<control type="group">
-	
-		<posy>97</posy>
-		<posx>300</posx>
-		<include>VisibleFadeEffect</include>
-		<control type="image">
-			<description>Current Fanart image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>976</width>
-			<height>547</height>
-			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-			<bordertexture border="5">button-nofocus.png</bordertexture>
-			<bordersize>4</bordersize>
-			<aspectratio>keep</aspectratio>
-			<visible>!IsEmpty(Listitem.Property(Fanart_Image))</visible>
-		</control>
-		<control type="group">
-			<visible>IsEmpty(Listitem.Property(Fanart_Image))</visible>
-			<control type="image">
-				<description>No Fanart Back</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>675</width>
-				<height>380</height>
-				<texture>Fanart_Fallback_Small.jpg</texture>
-				<bordertexture border="5">button-nofocus.png</bordertexture>
-				<bordersize>4</bordersize>
-				<aspectratio>stretch</aspectratio>
-				<colordiffuse>99FFFFFF</colordiffuse>
-			</control>
-		</control>
+		<posx>40</posx>
+		<posy>95</posy>
+		<aspectratio>keep</aspectratio>
+	    <texture border="20" background="true">frames/frame_movie_xlarge.png</texture>
 	</control>
-
 	<control type="image">
-		<posx>12</posx>
+		<posx>47</posx>
 		<posy>101</posy>
 		<width>359</width>
 		<height>539</height>
-	    <texture>$INFO[ListItem.Thumb]</texture>
+	    <texture diffuse="frames/mask_movie_xlarge.png" background="false">$INFO[ListItem.Thumb]</texture>
 		<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-		<bordertexture border="5">button-nofocus.png</bordertexture>
 	</control>
   
 	<control type="label">
-	    <posx>20</posx>
-		<posy>35</posy>
-		<width>1200</width>
+	    <posx>460</posx>
+		<posy>115</posy>
+		<width>800</width>
 		<height>30</height>
 		<font>aller_4_48</font>
 		<textcolor>greymd</textcolor>
 		<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
 		<visible>!Window.IsActive(126)</visible>
 	</control>
- 	<control type="image">
-		<posx>371</posx>
-		<posy>101</posy>
-		<width>340</width>
-		<height>539</height>
-	    <texture>black-back.png</texture>
-		<aspectratio>stretch</aspectratio>
-	</control>	 	
+  	
 	<control type="textbox">
     	<description>Plot</description>
-    	<posx>385</posx>
-    	<posy>118</posy>
-    	<width>310</width>
-    	<height>490</height>
+    	<posx>460</posx>
+    	<posy>178</posy>
+    	<width>370</width>
+    	<height>460</height>
     	<spinposx>500</spinposx>
     	<spinposy>-30</spinposy>
     	<spinwidth>20</spinwidth>
@@ -121,7 +60,6 @@
     	<font>aller_2_20</font>
 		<label>$INFO[ListItem.Plot]</label>
     	<textcolor>greyl</textcolor>
-		<align>justify</align>
 	     	<autoscroll delay="5000" time="3000" repeat="10000">true</autoscroll>
 		<visible>!Window.IsActive(126)</visible>
   	</control>
@@ -270,7 +208,7 @@
 
 <control type="group">
 	<posx>0</posx>
-	<posy>75</posy>
+	<posy>30</posy>
 	<!--IMDB Rating-->
 	<control type="label">
 		<posx>1245</posx>

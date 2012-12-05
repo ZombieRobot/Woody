@@ -53,7 +53,7 @@
 				<pagecontrol>60</pagecontrol>
 				<focusposition>3</focusposition>
 				<scrolltime>200</scrolltime>
-				<visible>![Window.IsVisible(VideoLibrary) + Container.Content(TVShows) + !Skin.HasSetting(TVShowsUsePosters)]</visible>
+				<visible>![Window.IsVisible(VideoLibrary) + !Container.Content(TVShows) + !Skin.HasSetting(TVShowsUsePosters)]</visible>
 				<itemlayout height="60" width="580">
 
 					<control type="label">
@@ -418,81 +418,7 @@
 		</control>
 	</include>
 
-	<include name="WideIconView">
-		<control type="group">
-			<visible>Control.IsVisible(505)</visible>
-			<include>VisibleFadeEffect</include>
-			<control type="panel" id="505">
-				<visible>!Container.Content(LiveTV) + !Container.Content(Movies) + !Container.Content(Episodes) + !Container.Content(Seasons) + !Container.Content(MusicVideos) + !Container.Content(Addons) + !Skin.HasSetting(TVShowsUsePosters)</visible>
-				<posx>95</posx>
-				<posy>80</posy>
-				<width>1080</width>
-				<height>550</height>
-				<onleft>2</onleft>
-				<onright>60</onright>
-				<onup>505</onup>
-				<ondown>505</ondown>
-				<viewtype label="$LOCALIZE[539] $LOCALIZE[536]">list</viewtype>
-				<pagecontrol>60</pagecontrol>
-				<scrolltime>200</scrolltime>
-				<preloaditems>2</preloaditems>
-				<itemlayout height="110" width="540">
-					<control type="image">
-						<posx>1</posx>
-						<posy>0</posy>
-						<width>538</width>
-						<height>105</height>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>5</bordersize>
-						<texture background="true">$INFO[Listitem.Icon]</texture>
-					</control>
-					<control type="image">
-						<posx>500</posx>
-						<posy>70</posy>
-						<width>35</width>
-						<height>35</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-					</control>
-				</itemlayout>
-				<focusedlayout height="110" width="540">
-					<control type="image">
-						<posx>1</posx>
-						<posy>0</posy>
-						<width>538</width>
-						<height>105</height>
-						<bordertexture border="5">folder-focus.png</bordertexture>
-						<bordersize>5</bordersize>
-						<texture background="true">$INFO[Listitem.Icon]</texture>
-					</control>
-					<control type="image">
-						<posx>500</posx>
-						<posy>70</posy>
-						<width>35</width>
-						<height>35</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-					</control>
-				</focusedlayout>
-			</control>
-			<control type="scrollbar" id="60">
-				<posx>1170</posx>
-				<posy>80</posy>
-				<width>25</width>
-				<height>550</height>
-				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-				<textureslidernib>ScrollBarNib.png</textureslidernib>
-				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-				<onleft>505</onleft>
-				<onright>2</onright>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
-				<visible>Control.IsVisible(505)</visible>
-			</control>
-		</control>
-	</include>
+
 	<include name="FullWidthList">
 		<control type="group">
 			<visible>Control.IsVisible(51)</visible>

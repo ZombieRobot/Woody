@@ -6,29 +6,82 @@
 			<visible>!Window.IsVisible(FileBrowser)</visible>
 			<animation effect="slide" start="1100,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="1100,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			
 			<control type="image">
-				<posx>180</posx>
+				<posx>0</posx>
 				<posy>0</posy>
-				<width>1100</width>
+				<width>1280</width>
 				<height>720</height>
-				<texture border="15,0,0,0" flipx="true">MediaBladeSub.png</texture>
+				<texture>black-back.png</texture>
+				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="button">
-				<description>Close Window button</description>
-				<posx>230</posx>
+			<control type="image">
+				<posx>0</posx>
 				<posy>0</posy>
-				<width>64</width>
-				<height>32</height>
-				<label>-</label>
-				<font>-</font>
-				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
-				<texturenofocus>DialogCloseButton.png</texturenofocus>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<visible>system.getbool(input.enablemouse)</visible>
+				<width>1280</width>
+				<height>920</height>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<colordiffuse>DDFFFFFF</colordiffuse>
+				<aligny>center</aligny>
+				<texture>bg_grey_center.png</texture>
+			</control>		
+			<control tye="image">
+				<posx>0</posx>
+				<posy>708</posy>
+				<width>1280</width>
+				<height>183</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>wood_bg_h.png</texture>
+			</control>	
+			<control tye="image">
+				<posx>0</posx>
+				<posy>-173</posy>
+				<width>1280</width>
+				<height>183</height>
+				<aspectratio>stretch</aspectratio>
+				<texture flipy="true">wood_bg_h.png</texture>
+			</control>	
+			<control type="group">
+			
+				<posy>97</posy>
+				<posx>300</posx>
+				<include>VisibleFadeEffect</include>
+				<control type="image">
+					<description>Current Fanart image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>976</width>
+					<height>547</height>
+					<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<bordertexture border="5">button-nofocus.png</bordertexture>
+					<bordersize>4</bordersize>
+					<aspectratio>keep</aspectratio>
+					<visible>!IsEmpty(Listitem.Property(Fanart_Image))</visible>
+				</control>
+				<control type="group">
+					<visible>IsEmpty(Listitem.Property(Fanart_Image))</visible>
+					<control type="image">
+						<description>No Fanart Back</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>675</width>
+						<height>380</height>
+						<texture>Fanart_Fallback_Small.jpg</texture>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+						<bordersize>4</bordersize>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>99FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>12</posx>
+						<posy>101</posy>
+						<width>359</width>
+						<height>539</height>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<bordertexture border="5">button-nofocus.png</bordertexture>
+					</control>
+				</control>
 			</control>
 			<control type="group">
 				<animation effect="fade" delay="400" start="0" end="100" time="200">WindowOpen</animation>
@@ -62,51 +115,7 @@
 					<include>AspectCodecFlaggingConditions</include>
 					<include>VideoTypeHackFlaggingConditions</include>
 				</control>
-				<control type="group">
-					<visible>Control.HasFocus(12)</visible>
-					<posy>90</posy>
-					<posx>387</posx>
-					<include>VisibleFadeEffect</include>
-					<control type="image">
-						<description>Current Fanart image</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>675</width>
-						<height>380</height>
-						<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
-						<bordertexture border="5">button-nofocus.png</bordertexture>
-						<bordersize>4</bordersize>
-						<aspectratio>keep</aspectratio>
-						<visible>!IsEmpty(Listitem.Property(Fanart_Image))</visible>
-					</control>
-					<control type="group">
-						<visible>IsEmpty(Listitem.Property(Fanart_Image))</visible>
-						<control type="image">
-							<description>No Fanart Back</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>675</width>
-							<height>380</height>
-							<texture>Fanart_Fallback_Small.jpg</texture>
-							<bordertexture border="5">button-nofocus.png</bordertexture>
-							<bordersize>4</bordersize>
-							<aspectratio>stretch</aspectratio>
-							<colordiffuse>99FFFFFF</colordiffuse>
-						</control>
-						<control type="label">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>675</width>
-							<height>380</height>
-							<font>font30_title</font>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>31311</label>
-						</control>
-					</control>
-				</control>
+			
 				<control type="group">
 					<posy>90</posy>
 					<posx>387</posx>

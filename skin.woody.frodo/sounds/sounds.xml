@@ -51,11 +51,11 @@
     </action>
     <action>
       <name>select</name>
-      <file>click.wav</file>
+      <file>select.wav</file>
     </action>
     <action>
       <name>parentdir</name>
-      <file>back.wav</file>
+      <file>click-back.wav</file>
     </action>
     <action>
       <name>previousmenu</name>
@@ -72,10 +72,6 @@
       <name>infodialog</name>
       <activate>notify.wav</activate>
       <deactivate>out.wav</deactivate>
-    </window>
-    <window>
-      <name>startup</name>
-      <activate></activate>
     </window>
   </windows>
 </sounds>

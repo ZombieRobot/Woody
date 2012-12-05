@@ -16,7 +16,7 @@
 			<include>BigSlide</include> <!-- view id = 503 -->
 			<include>MediaListView2</include> <!-- view id = 504 -->
 			<include>MediaListView4</include> <!-- view id = 515 -->
-			<include>WideIconView</include> <!-- view id = 505 -->
+			<include>TV_List_Banner_View</include> <!-- view id = 505 -->
 			<include>MusicVideoInfoListView</include> <!-- view id = 511 -->
 			<include>AddonInfoListView1</include> <!-- view id = 550 -->
 			<include>AddonInfoThumbView1</include> <!-- view id = 551 -->

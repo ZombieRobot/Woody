@@ -117,7 +117,7 @@
     	<reverse>yes</reverse>
     	<pulseonselect>false</pulseonselect>
   	</default>
-  	<default type="radiobutton">
+  	  <default type="radiobutton">
     	<posx>0</posx>
     	<posy>0</posy>
     	<width>150</width>
@@ -129,8 +129,8 @@
     	<align>left</align>
     	<disabledcolor>FF444444</disabledcolor>
     	<pulseonselect>false</pulseonselect>
-    	<textureradiofocus>RadiobuttonFo.png</textureradiofocus>
-    	<textureradionofocus>RadiobuttonNF.png</textureradionofocus>
+    	<textureradiofocus>radiobutton-focus.png</textureradiofocus>
+    	<textureradionofocus>radiobutton-nofocus.png</textureradionofocus>
     	<radiowidth>12</radiowidth>
     	<radioheight>12</radioheight>
   	</default>
