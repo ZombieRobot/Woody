@@ -8,7 +8,7 @@
 		<include>ContentPanelBackgrounds</include>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>		
-			<include>CommonRootView</include> <!-- view id = 50 -->
+			<include>List</include> <!-- view id = 50 -->
 			<include>FullWidthList</include> <!-- view id = 51 -->
 			<include>Wall</include> <!-- view id = 500 -->
 			<include>HalfWall</include> <!-- view id = 501 -->

@@ -224,30 +224,6 @@
 						</item>
 					</content>
 				</control>
-				<control type="button">
-					<description>left Arrow</description>
-					<posx>-40</posx>
-					<posy>55</posy>
-					<width>30</width>
-					<height>40</height>
-					<texturefocus>arrow-big-left.png</texturefocus>
-					<texturenofocus>arrow-big-left.png</texturenofocus>
-					<onclick>Control.Move(8000,-1)</onclick>
-					<visible>Control.HasFocus(8000) + Container(8000).HasPrevious</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="button">
-					<description>right Arrow</description>
-					<posx>40r</posx>
-					<posy>55</posy>
-					<width>30</width>
-					<height>40</height>
-					<texturefocus>arrow-big-right.png</texturefocus>
-					<texturenofocus>arrow-big-right.png</texturenofocus>
-					<onclick>Control.Move(8000,1)</onclick>
-					<visible>Control.HasFocus(8000) + Container(8000).HasNext</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
 			</control>
 			<control type="group">
 				<posx>23</posx>
@@ -496,31 +472,6 @@
 						</item>
 					</content>
 				</control>
-				<control type="button">
-					<description>left Arrow</description>
-					<posx>-10</posx>
-					<posy>55</posy>
-					<width>30</width>
-					<height>40</height>
-					<texturefocus>arrow-big-left.png</texturefocus>
-					<texturenofocus>arrow-big-left.png</texturenofocus>
-					<onclick>Control.Move(8001,-1)</onclick>
-					<visible>Control.HasFocus(8001) + Container(8001).HasPrevious</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="button">
-					<description>right Arrow</description>
-					<posx>40r</posx>
-					<posy>55</posy>
-					<width>30</width>
-					<height>40</height>
-					<texturefocus>arrow-big-right.png</texturefocus>
-					<texturenofocus>arrow-big-right.png</texturenofocus>
-					<onclick>Control.Move(8001,1)</onclick>
-					<visible>Control.HasFocus(8001) + Container(8001).HasNext</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
-			</control>
 			<control type="group">
 				<posx>118</posx>
 				<posy>50</posy>
@@ -696,30 +647,6 @@
 							<visible>!IsEmpty(Window.Property(LatestAlbum.10.Title))</visible>
 						</item>
 					</content>
-				</control>
-				<control type="button">
-					<description>left Arrow</description>
-					<posx>-40</posx>
-					<posy>530</posy>
-					<width>30</width>
-					<height>40</height>
-					<texturefocus>arrow-big-left.png</texturefocus>
-					<texturenofocus>arrow-big-left.png</texturenofocus>
-					<onclick>Control.Move(8002,-1)</onclick>
-					<visible>Control.HasFocus(8002) + Container(8002).HasPrevious</visible>
-					<include>VisibleFadeEffect</include>
-				</control>
-				<control type="button">
-					<description>right Arrow</description>
-					<posx>40r</posx>
-					<posy>530</posy>
-					<width>30</width>
-					<height>40</height>
-					<texturefocus>arrow-big-right.png</texturefocus>
-					<texturenofocus>arrow-big-right.png</texturenofocus>
-					<onclick>Control.Move(8002,1)</onclick>
-					<visible>Control.HasFocus(8002) + Container(8002).HasNext</visible>
-					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
 		</control>

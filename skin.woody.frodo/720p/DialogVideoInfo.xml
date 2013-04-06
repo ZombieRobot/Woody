@@ -102,9 +102,9 @@
 	</control>
  	<control type="image">
 		<posx>371</posx>
-		<posy>101</posy>
-		<width>340</width>
-		<height>539</height>
+		<posy>401</posy>
+		<width>896</width>
+		<height>239</height>
 	    <texture>black-back.png</texture>
 		<aspectratio>stretch</aspectratio>
 	</control>	 	

@@ -395,7 +395,7 @@
 			</control>	
 				<!--Studiologo-->
 			<control type="image">
-				<posx>-138</posx>
+				<posx>-145</posx>
 				<posy>200</posy>
 				<width>170</width>
 				<height>90</height>

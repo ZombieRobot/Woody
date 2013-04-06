@@ -67,7 +67,7 @@
 						<posy>4</posy>
 						<width>432</width>
 						<height>75</height>
-						<texture diffuse="bigPosterMask_banner_small.png" background="false">$INFO[Listitem.Icon]</texture>
+						<texture diffuse="bigPosterMask_banner_small.png" background="false">$INFO[ListItem.Art(banner)]</texture>
 						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 					</control>
 					<control tye="image">
@@ -96,7 +96,7 @@
 						<posy>28</posy>
 						<width>657</width>
 						<height>124</height>
-						<texture diffuse="bigPosterMask_banner.png" background="false">$INFO[Listitem.Icon]</texture>
+						<texture diffuse="bigPosterMask_banner.png" background="false">$INFO[ListItem.Art(banner)]</texture>
 						<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
 					</control>
 					<control tye="image">
@@ -288,7 +288,7 @@
 			</control>
 		
 			<control type="label">
-				<posx>1146</posx>
+				<posx>1233</posx>
 				<font>Small1</font>
 				<textcolor>58353533</textcolor>
 				<align>right</align>
@@ -296,7 +296,7 @@
 			</control>
 			<control type="label">
 				<description>Page Count Label</description>
-				<posx>1215</posx>
+				<posx>1233</posx>
 				<posy>90</posy>
 				<font>medium</font>
 				<textcolor>58353533</textcolor>

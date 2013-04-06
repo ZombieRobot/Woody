@@ -68,6 +68,12 @@
 			<aspect>1.0</aspect>
 		</font>	
 		<font>
+			<name>plotlist</name>
+			<filename>aller_1.ttf</filename>
+			<size>19</size>
+			<aspect>1.0</aspect>
+		</font>	
+		<font>
 			<name>homemusicinfo</name>
 			<filename>aller_1.ttf</filename>
 			<size>16</size>

@@ -4,6 +4,7 @@
 	<include file="ViewsVideoLibrary.xml" />
 	<include file="ViewsMusicLibrary.xml" />
 	<include file="Viewtype_500_Wall.xml" />
+	<include file="Viewtype_50_List.xml" />
 	<include file="Viewtype_501_HalfWall.xml" />
 	<include file="Viewtype_503_BigSlide.xml" />
 	<include file="Viewtype_505_TV_BannerList.xml" />
@@ -870,6 +871,7 @@
 			<include>VisibleFadeEffect</include>
 			<animation effect="slide" start="0" end="-115,-65" time="0" condition="Control.IsVisible(503)">Conditional</animation>
 			<animation effect="slide" start="0" end="-0,560" time="0" condition="Control.IsVisible(501)">Conditional</animation>
+			<animation effect="slide" start="0" end="-0,-70" time="200" condition="Control.IsVisible(500)">Conditional</animation>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="fade" start="0" end="100" time="1600" delay="1000" />
 			</animation>
@@ -910,6 +912,7 @@
 				<aligny>center</aligny>
 				<font>homemusicinfo</font>
 				<textcolor>58353533</textcolor>
+				<animation effect="slide" start="0" end="-0,-20" time="0" condition="Control.IsVisible(500)">Conditional</animation>
 			</control>
 			<control type="label">
 				<description>Title label</description>
@@ -922,6 +925,7 @@
 				<aligny>center</aligny>
 				<font>homemusicinfo</font>
 				<textcolor>greyd</textcolor>
+				<animation effect="slide" start="0" end="-0,-20" time="0" condition="Control.IsVisible(500)">Conditional</animation>
 			</control>
 			<!--control type="label">
 				<description>Title label</description>
@@ -962,16 +966,17 @@
 			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
 			<animation effect="slide" end="200,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<animation effect="slide" start="200,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0" end="-0,58" time="200" condition="Control.IsVisible(500) + Player.Playing">Conditional</animation>
 		</control>
 	</include>
 	<include name="Clocksettings">
 		<control type="label">
 			<description>time label</description>
 			<posx>1136</posx>
-			<posy>35</posy>
+			<posy>15</posy>
 			<font>Small1</font>
 			<align>left</align>
-			<textcolor>greym</textcolor>
+			<textcolor>white</textcolor>
 			<label>$INFO[System.Time]</label>
 			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
 		</control>

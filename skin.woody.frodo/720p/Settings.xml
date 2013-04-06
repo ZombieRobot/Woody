@@ -6,16 +6,17 @@
 		<!--Background-->  
 		<control type="image">
 			<posx>0</posx>
-			<posy>0</posy>
+			<posy>65</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture>settings_bg.png</texture>
+			<colordiffuse>EAFFFFFF</colordiffuse>
+			<texture>bg_grey_center.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
 		
-		<control type="label">
+		<control tye="label">
 			<posx>30</posx>
-			<posy>50</posy>
+			<posy>90</posy>
 			<width>800</width>
 			<height>30</height>
 			<font>aller_4_38</font>
@@ -25,7 +26,7 @@
 	
 		<control type="grouplist" id="9000">
 			<posx>30</posx>
-			<posy>147</posy>
+			<posy>117</posy>
 			<width>300</width>
 			<height>600</height>
 			<itemgap>26</itemgap>
